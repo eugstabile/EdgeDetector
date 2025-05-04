@@ -1,16 +1,14 @@
 /**
  * @file AlgorithmFactory.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile 
  * @brief Factory for the IAlgorithm interface
  * @version 2.0.0
  * @date 2024-03-22
  * 
- * Copyright (c) 2024, Photonicsens. All rights reserved.
  * 
  */
 
 #pragma once
-
 #ifndef _ALGORITHMFACTORY_H
 #define _ALGORITHMFACTORY_H
 

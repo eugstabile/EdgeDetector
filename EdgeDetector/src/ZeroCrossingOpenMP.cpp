@@ -172,7 +172,7 @@ void ZeroCrossingOpenMP::calculateEdges(const std::shared_ptr<Buffer> in, std::s
      *  
      */
 
-    //#pragma omp parallel for
+    #pragma omp parallel for
     for (int m = -marginsDerivative; m <= marginsDerivative; ++m) {
         vectorDerivativeKernel[m + marginsDerivative] = _mm_set1_ps(derivativeFilter_[m + marginsDerivative]);
     }

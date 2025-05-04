@@ -2,7 +2,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(TVM_PATH "${PROJECT_SOURCE_DIR}/tvm/build")
     set(TVM_LIB_PATH ${TVM_PATH}/"${TVM_LIB_NAME}.so")
 elseif(MSVC)
-    set(TVM_PATH "C:/Users/EugenioStabile.MSI-ES/Desarrollo/TesisEugenio/EdgeDetector/tvm/build/Release/")
+    set(TVM_PATH "${PROJECT_SOURCE_DIR}/tvm/build/Release")
     set(TVM_LIB_PATH "${TVM_PATH}/${TVM_LIB_NAME}.lib")
 endif()
 

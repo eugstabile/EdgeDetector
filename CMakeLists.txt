@@ -1,16 +1,16 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.23)
 
-project(EdgeProject VERSION 2.1.0 LANGUAGES C CXX)
+project(EdgeProject VERSION 1.0.0 LANGUAGES C CXX)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS   ON)
-set(CMAKE_CXX_STANDARD              17)
+set(CMAKE_CXX_STANDARD              20)
 set(CMAKE_CXX_STANDARD_REQUIRED     ON)
 set(CMAKE_CXX_EXTENSIONS            OFF)
 
 if(MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
-    set(CMAKE_CXX_FLAGS_RELEASE " ${CMAKE_CXX_FLAGS_RELEASE} /MP /Gd /std:c17 /std:c++17 /openmp /O2 /nologo /arch:AVX2")
-    set(CMAKE_CXX_FLAGS_DEBUG " ${CMAKE_CXX_FLAGS_DEBUG} /MP /Gd /std:c17 /std:c++17 /openmp /Od /nologo /arch:AVX2")
+    set(CMAKE_CXX_FLAGS_RELEASE " ${CMAKE_CXX_FLAGS_RELEASE} /MP /Gd /std:c++17 /openmp /O2 /nologo /arch:AVX2")
+    set(CMAKE_CXX_FLAGS_DEBUG " ${CMAKE_CXX_FLAGS_DEBUG} /MP /Gd /std:c++17 /openmp /Od /nologo /arch:AVX2")
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -fopenmp -O3 -mavx2 -mfma -fstrict-aliasing")
     set(CMAKE_CXX_FLAGS_DEBUG " ${CMAKE_CXX_FLAGS_DEBUG} -fopenmp -mavx2 -mfma -fstrict-aliasing")

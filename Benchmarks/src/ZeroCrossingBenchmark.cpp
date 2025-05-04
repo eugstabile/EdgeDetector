@@ -29,14 +29,16 @@ const std::vector<std::string> imagesInput = {CHESS, PARROT, WORDS, MOON};
 constexpr int ITERATIONS = 20;
 
 using ZeroCrossingCPUBenchmark = ZeroCrossingBenchmark<ZeroCrossingCPU, Buffer>;
+
+
 INSTANTIATE_TEST_SUITE_P(ZeroCrossingBenchmark, ZeroCrossingCPUBenchmark, ::testing::Values(ZERO_CROSSING_CPU));
 
 TEST_P(ZeroCrossingCPUBenchmark, benchmark_zeroCrossing_realImage) {
 
-    std::string algorithm = FUNC_NAME;
+    const std::string& algorithm = FUNC_NAME;
     benchmark = std::make_shared<Benchmark<std::string>>(ITERATIONS, imagesInput, algorithm);
 
-    std::function<void(std::string)> lambdaContext = [&](std::string image) {
+    std::function<void(std::string)> lambdaContext = [&](const std::string& image) {
         
         bufferIn = adapter->obtainImage(image);
         height = bufferIn->getDims()[HEIGHT];
@@ -74,10 +76,10 @@ TEST_P(ZeroCrossingCPUBenchmark, benchmark_zeroCrossing_syntheticImage) {
     syntheticMatrix = std::make_shared<SyntheticMatrix>(numOfImages, minHeight, minWidth, growthFactor);
     imagesSyntheticInput = syntheticMatrix->getSyntheticMultipleMatrix();
 
-    std::string algorithm = FUNC_NAME;
+    const std::string& algorithm = FUNC_NAME;
     benchmarkSynthetic = std::make_shared<Benchmark<std::shared_ptr<Buffer>>>(ITERATIONS, imagesSyntheticInput, algorithm);
 
-    std::function<void(std::shared_ptr<Buffer>)> lambdaContext = [&](std::shared_ptr<Buffer> inputImage) {
+    std::function<void(std::shared_ptr<Buffer>)> lambdaContext = [&](const std::shared_ptr<Buffer>& inputImage) {
         
         bufferIn = inputImage;
         height = bufferIn->getDims()[HEIGHT];
@@ -112,15 +114,17 @@ TEST_P(ZeroCrossingCPUBenchmark, benchmark_zeroCrossing_syntheticImage) {
 
 
 using ZeroCrossingOpenMPBenchmark = ZeroCrossingBenchmark<ZeroCrossingOpenMP, Buffer>;
+
+
 INSTANTIATE_TEST_SUITE_P(ZeroCrossingBenchmark, ZeroCrossingOpenMPBenchmark, ::testing::Values(ZERO_CROSSING_OPEN_MP));
 
 
 TEST_P(ZeroCrossingOpenMPBenchmark, benchmark_zeroCrossing_realImage) {
 
-    std::string algorithm = FUNC_NAME;
+    const std::string& algorithm = FUNC_NAME;
     benchmark = std::make_shared<Benchmark<std::string>>(ITERATIONS, imagesInput, algorithm);
 
-    std::function<void(std::string)> lambdaContext = [&](std::string image) {
+    std::function<void(std::string)> lambdaContext = [&](const std::string& image) {
         
         bufferIn = adapter->obtainImage(image);
         height = bufferIn->getDims()[HEIGHT];
@@ -158,10 +162,10 @@ TEST_P(ZeroCrossingOpenMPBenchmark, benchmark_zeroCrossing_syntheticImage) {
     syntheticMatrix = std::make_shared<SyntheticMatrix>(numOfImages, minHeight, minWidth, growthFactor);
     imagesSyntheticInput = syntheticMatrix->getSyntheticMultipleMatrix();
 
-    std::string algorithm = FUNC_NAME;
+    const std::string& algorithm = FUNC_NAME;
     benchmarkSynthetic = std::make_shared<Benchmark<std::shared_ptr<Buffer>>>(ITERATIONS, imagesSyntheticInput, algorithm);
 
-    std::function<void(std::shared_ptr<Buffer>)> lambdaContext = [&](std::shared_ptr<Buffer> inputImage) {
+    std::function<void(std::shared_ptr<Buffer>)> lambdaContext = [&](const std::shared_ptr<Buffer>& inputImage) {
         
         bufferIn = inputImage;
         height = bufferIn->getDims()[HEIGHT];
@@ -196,15 +200,17 @@ TEST_P(ZeroCrossingOpenMPBenchmark, benchmark_zeroCrossing_syntheticImage) {
 
 
 using ZeroCrossingTVMBenchmark = ZeroCrossingBenchmark<ZeroCrossingTVM, BufferTVM>;
+
+
 INSTANTIATE_TEST_SUITE_P(ZeroCrossingBenchmark, ZeroCrossingTVMBenchmark, ::testing::Values(ZERO_CROSSING_TVM));
 
 
 TEST_P(ZeroCrossingTVMBenchmark, benchmark_zeroCrossing_realImage) {
 
-    std::string algorithm = FUNC_NAME;
+    const std::string& algorithm = FUNC_NAME;
     benchmark = std::make_shared<Benchmark<std::string>>(ITERATIONS, imagesInput, algorithm);
 
-    std::function<void(std::string)> lambdaContext = [&](std::string image) {
+    std::function<void(std::string)> lambdaContext = [&](const std::string& image) {
         
         std::shared_ptr<Buffer> in = adapter->obtainImage(image);
         std::shared_ptr<TVMAdapter> tvmAdapter = std::make_shared<TVMAdapter>();
@@ -248,15 +254,17 @@ TEST_P(ZeroCrossingTVMBenchmark , benchmark_zeroCrossing_syntheticImage) {
 
     std::vector<std::shared_ptr<BufferTVM>> imagesSyntheticInputTVM;
 
-    for (int i = 0; i < imagesSyntheticInput.size(); ++i) {
+    for (size_t i = 0; i < imagesSyntheticInput.size(); ++i) {
+
         imagesSyntheticInputTVM.push_back(tvmAdapter->bufferToTVM(imagesSyntheticInput[i]));
+
     }
 
-    std::string algorithm = FUNC_NAME;
+    const std::string& algorithm = FUNC_NAME;
 
     benchmarkSynthetic = std::make_shared<Benchmark<std::shared_ptr<BufferTVM>>>(ITERATIONS, imagesSyntheticInputTVM, algorithm);
 
-    std::function<void(std::shared_ptr<BufferTVM>)> lambdaContext = [&](std::shared_ptr<BufferTVM> inputImage) {
+    std::function<void(std::shared_ptr<BufferTVM>)> lambdaContext = [&](const std::shared_ptr<BufferTVM>& inputImage) {
         
         bufferIn = inputImage;
         height = bufferIn->getDims()[HEIGHT];
@@ -291,14 +299,16 @@ TEST_P(ZeroCrossingTVMBenchmark , benchmark_zeroCrossing_syntheticImage) {
 
 
 using ZeroCrossingOpenCLBenchmark = ZeroCrossingBenchmark<ZeroCrossingOpenCL, Buffer>;
+
+
 INSTANTIATE_TEST_SUITE_P(ZeroCrossingBenchmark, ZeroCrossingOpenCLBenchmark, ::testing::Values(ZERO_CROSSING_OPENCL));
 
 TEST_P(ZeroCrossingOpenCLBenchmark, benchmark_zeroCrossing_realImage) {
 
-    std::string algorithm = FUNC_NAME;
+    const std::string& algorithm = FUNC_NAME;
     benchmark = std::make_shared<Benchmark<std::string>>(ITERATIONS, imagesInput, algorithm);
 
-    std::function<void(std::string)> lambdaContext = [&](std::string image) {
+    std::function<void(std::string)> lambdaContext = [&](const std::string& image) {
         
         bufferIn = adapter->obtainImage(image);
         height = bufferIn->getDims()[HEIGHT];
@@ -336,10 +346,10 @@ TEST_P(ZeroCrossingOpenCLBenchmark, benchmark_zeroCrossing_syntheticImage) {
     syntheticMatrix = std::make_shared<SyntheticMatrix>(numOfImages, minHeight, minWidth, growthFactor);
     imagesSyntheticInput = syntheticMatrix->getSyntheticMultipleMatrix();
 
-    std::string algorithm = FUNC_NAME;
+    const std::string& algorithm = FUNC_NAME;
     benchmarkSynthetic = std::make_shared<Benchmark<std::shared_ptr<Buffer>>>(ITERATIONS, imagesSyntheticInput, algorithm);
 
-    std::function<void(std::shared_ptr<Buffer>)> lambdaContext = [&](std::shared_ptr<Buffer> inputImage) {
+    std::function<void(std::shared_ptr<Buffer>)> lambdaContext = [&](const std::shared_ptr<Buffer>& inputImage) {
         
         bufferIn = inputImage;
         height = bufferIn->getDims()[HEIGHT];

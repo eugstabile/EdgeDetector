@@ -10,19 +10,19 @@
 #include "Benchmark.h"
 
 #define TEMPLATE_INIT(T) \
-    template Benchmark<T>::Benchmark(int iterations, const std::vector<T>& imagesInput, std::string& funcline);\
-    template void Benchmark<T>::setIterations(int iterations);                                                 \
-    template void Benchmark<T>::setImages(const std::vector<T>& images);                                       \
-    template void Benchmark<T>::setProcType(const AlgorithmFactory::AlgorithmType procType);                   \
-    template void Benchmark<T>::setMatrixSize(size_t height, size_t width, size_t channels);                   \
-    template void Benchmark<T>::setFuncline(std::string& funcline);                                            \
-    template void Benchmark<T>::setComment(std::string& comment);                                              \
-    template std::vector<T>& Benchmark<T>::getImagesInput();                                                   \
-    template std::string& Benchmark<T>::getComment();                                                          \
-    template BENCH_TYPE Benchmark<T>::benchmarkLambda(std::function<void()>& lambda);                          \
-    template void Benchmark<T>::compute(std::function<void(T)>& lambdaContext, std::function<void()>& lambda); \
-    template void Benchmark<T>::calculateTime(BENCH_TYPE sum, std::vector<uint64_t>& results);                 \
-    template void Benchmark<T>::saveResult();                                                                  \
+    template Benchmark<T>::Benchmark(int iterations, const std::vector<T>& imagesInput, const std::string& funcline);   \
+    template void Benchmark<T>::setIterations(int iterations);                                                          \
+    template void Benchmark<T>::setImages(const std::vector<T>& images);                                                \
+    template void Benchmark<T>::setProcType(const AlgorithmFactory::AlgorithmType procType);                            \
+    template void Benchmark<T>::setMatrixSize(size_t height, size_t width, size_t channels);                            \
+    template void Benchmark<T>::setFuncline(const std::string& funcline);                                               \
+    template void Benchmark<T>::setComment(const std::string& comment);                                                 \
+    template std::vector<T>& Benchmark<T>::getImagesInput();                                                            \
+    template std::string& Benchmark<T>::getComment();                                                                   \
+    template BENCH_TYPE Benchmark<T>::benchmarkLambda(std::function<void()>& lambda);                                   \
+    template void Benchmark<T>::compute(std::function<void(T)>& lambdaContext, std::function<void()>& lambda);          \
+    template void Benchmark<T>::calculateTime(BENCH_TYPE sum, std::vector<uint64_t>& results);                          \
+    template void Benchmark<T>::saveResult();                                                                           \
     template void Benchmark<T>::substractNames(std::string& pathMethod);
 
 TEMPLATE_INIT(std::string)
@@ -36,9 +36,9 @@ enum MatrixDims {
 };
 
 
-template <class T>
+template <typename T>
 Benchmark<T>::Benchmark(int iterations, const std::vector<T>& imagesInput,
-                        std::string& funcline) {
+                        const std::string& funcline) {
 
     setIterations(iterations);
     setImages(imagesInput);
@@ -47,7 +47,7 @@ Benchmark<T>::Benchmark(int iterations, const std::vector<T>& imagesInput,
 }
 
 
-template <class T> 
+template <typename T> 
 void Benchmark<T>::setIterations(int iterations) {
   
     iterations_ = iterations;
@@ -55,7 +55,7 @@ void Benchmark<T>::setIterations(int iterations) {
 }
 
 
-template <class T> 
+template <typename T> 
 void Benchmark<T>::setImages(const std::vector<T>& images) {
 
     imagesInput_ = images;
@@ -63,7 +63,7 @@ void Benchmark<T>::setImages(const std::vector<T>& images) {
 }
 
 
-template <class T>
+template <typename T>
 void Benchmark<T>::setProcType(const AlgorithmFactory::AlgorithmType procTypeId) {
 
     procTypeId_ = procTypeId;
@@ -71,7 +71,7 @@ void Benchmark<T>::setProcType(const AlgorithmFactory::AlgorithmType procTypeId)
 }
 
 
-template <class T>
+template <typename T>
 void Benchmark<T>::setMatrixSize(size_t height, size_t width, size_t channels) {
 
     std::get<MatrixDims::HEIGHT>(matrixSize_) = height;
@@ -83,23 +83,23 @@ void Benchmark<T>::setMatrixSize(size_t height, size_t width, size_t channels) {
 }
 
 
-template <class T> 
-void Benchmark<T>::setFuncline(std::string& funcline) {
+template <typename T> 
+void Benchmark<T>::setFuncline(const std::string& funcline) {
 
     funcline_ = funcline;
 
 }
 
 
-template <class T> 
-void Benchmark<T>::setComment(std::string& comment) {
+template <typename T> 
+void Benchmark<T>::setComment(const std::string& comment) {
 
-    comment_ = std::string(", " + comment);
+    comment_ = ", " + std::string(comment);
 
 }
 
 
-template <class T> 
+template <typename T> 
 std::vector<T>& Benchmark<T>::getImagesInput() {
 
     return imagesInput_;
@@ -107,7 +107,7 @@ std::vector<T>& Benchmark<T>::getImagesInput() {
 }
 
 
-template <class T> 
+template <typename T> 
 std::string& Benchmark<T>::getComment() { 
   
     return comment_; 
@@ -115,89 +115,109 @@ std::string& Benchmark<T>::getComment() {
 }
 
 
-template <class T>
+template <typename T>
 BENCH_TYPE Benchmark<T>::benchmarkLambda(std::function<void()>& lambda) {
 
-    std::chrono::high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();
+    auto start = std::chrono::high_resolution_clock::now();
     lambda();
-    std::chrono::high_resolution_clock::time_point stop = std::chrono::high_resolution_clock::now();
+    auto stop = std::chrono::high_resolution_clock::now();
     
-    long long duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start).count();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start).count();
 
     return static_cast<BENCH_TYPE>(duration);
 
 }
 
 
-template <class T>
+template <typename T>
 void Benchmark<T>::compute(std::function<void(T)>& lambdaContext, std::function<void()>& lambda) {
 
     BENCH_TYPE sum;
     std::vector<uint64_t> results;
 
     for (auto&& image : imagesInput_) {
+        
         sum = 0ULL;
-        results = std::vector<uint64_t>{};
+        results.reserve(iterations_);
+        
         lambdaContext(image);
+
         lambda();
         lambda();
         lambda();
+        
         for (int i = 0; i < iterations_; ++i) {
+
             BENCH_TYPE&& res = benchmarkLambda(lambda);
             sum += res;
             results.push_back(static_cast<size_t>(res));
+
         }
+
         calculateTime(sum, results);
+
     }
+
     saveResult();
 
 }
 
 
-template <class T>
+template <typename T>
 void Benchmark<T>::calculateTime(BENCH_TYPE sum, std::vector<uint64_t>& results) {
 
+    static constexpr float32_t zScore{1.96f};
+    
     BENCH_TYPE mean = static_cast<BENCH_TYPE>(sum / iterations_);
-    float32_t std = 0.0f;
-    BENCH_TYPE desv = 0.0;
-    const float32_t zScore = 1.96f;
+    float32_t stdDev = 0.0f;
+    BENCH_TYPE variance = 0.0;
 
-    for (int i = 0; i < results.size(); i++) {
-        desv += pow(results[i] - mean, 2);
+    for (const auto &result :results) {
+
+        variance += pow(result - mean, 2);
+
     }
 
-    BENCH_TYPE variance = desv / iterations_;
+    variance /= iterations_;
 
-    std = static_cast<float>(std::sqrt(variance));
+    stdDev = static_cast<float>(std::sqrt(variance));
 
-    float32_t errorMargin = zScore * (std / std::sqrt(static_cast<float32_t>(iterations_)));
+    float32_t errorMargin = zScore * (stdDev / std::sqrt(static_cast<float32_t>(iterations_)));
 
     std::sort(results.begin(), results.end());
-    size_t resultSize = results.size();
-    size_t resultCenter = results.size() / 2;
+    const size_t resultSize = results.size();
+    const size_t resultCenter = results.size() / 2;
     
-    BENCH_TYPE median = resultSize % 2 == 0 ? static_cast<BENCH_TYPE>(results[(resultSize - 1) / 2] + results[resultCenter]) / 2 : results[resultCenter];
+    BENCH_TYPE median = resultSize % 2 == 0 ?
+                        static_cast<BENCH_TYPE>(results[(resultSize - 1) / 2] + results[resultCenter]) / 2 :
+                        results[resultCenter];
 
-    if (results_.find(matrixSize_) != results_.end()) {
-        results_[matrixSize_].resultMean += mean;
-        results_[matrixSize_].resultMedian += median;
-        results_[matrixSize_].resultErrorMargin += errorMargin;
-        results_[matrixSize_].resultStd += std;
-        results_[matrixSize_].numImages += 1;
+    auto it = results_.find(matrixSize_);
+    
+    if (it != results_.end()) {
+
+        it->second.resultMean += mean;
+        it->second.resultMedian += median;
+        it->second.resultErrorMargin += errorMargin;
+        it->second.resultStd += stdDev;
+        it->second.numImages += 1;
+
     } else {
+
         MathResult valueMap{};
         valueMap.resultMean = mean;
         valueMap.resultMedian = median;
         valueMap.resultErrorMargin = errorMargin;
-        valueMap.resultStd = std;
+        valueMap.resultStd = stdDev;
         valueMap.numImages = 1;
         results_.insert(std::make_pair(matrixSize_, valueMap));
+
     }
   
 }
 
 
-template <class T> 
+template <typename T> 
 void Benchmark<T>::saveResult() {
 
     substractNames(funcline_);
@@ -232,86 +252,72 @@ void Benchmark<T>::saveResult() {
     std::string stringChannels;
     std::string configuration;
 
-#define SEPARATOR << "|" <<
-#define LINEND SEPARATOR std::endl
-#define PUTCELL(VALUE) SEPARATOR VALUE
-
-#define HEADER                                                                      \
-  SEPARATOR "	Algorithm			" SEPARATOR                                     \
-            "	Configuration		" SEPARATOR                                     \
-            "	Num Images			" SEPARATOR                                     \
-            "	Matrix size	(MxN)	" SEPARATOR                                     \
-            "	Num Iterations		" SEPARATOR                                     \
-            "	Median duration (us)" SEPARATOR                                     \
-            "	Avg duration (us)	" SEPARATOR                                     \
-            "	Margin error +- (us)" SEPARATOR                                     \
-            "	Std Deviation (us)	" LINEND
-
-#define SUBHEADER                                                                   \
-    SEPARATOR                                                                       \
-    "-----------------------" SEPARATOR "-----------------------" SEPARATOR         \
-    "-----------------------" SEPARATOR "-----------------------" SEPARATOR         \
-    "-----------------------" SEPARATOR "-----------------------" SEPARATOR         \
-    "-----------------------" SEPARATOR "-----------------------" SEPARATOR         \
-    "-----------------------" LINEND
-
-    std::fstream file = std::fstream();
-    std::stringstream md = std::stringstream();
-    std::string fileName = std::string("Benchmarking") + std::string(".md");
+    std::fstream file;
+    std::stringstream md;
+    std::string fileName = "Benchmarking.md";
 
     file.open(fileName.c_str(), std::ios::in | std::ios::out | std::ios::app);
 
+    if (!file.is_open()) {
+        THROW_EXCEPTION("Error opening benchmarking file.");
+    }   
+
     file.seekg(0, std::ios::end);
+
     if (file.tellg() == 0) {
-        md HEADER SUBHEADER;
-        file << md.str();
+
+        file << "| Algorithm | Configuration | Num Images | Matrix size (MxN) | Num Iterations | "
+             << "Median duration (us) | Avg duration (us) | Margin error +- (us) | Std Deviation (us) |\n"
+             << "| --------- | ------------- | ---------- | ----------------- | -------------- | "
+             << "-------------------- | ----------------- | -------------------- | ------------------ |\n";
+
     }
 
-    for (const auto& image : results_) {
-        numImages = image.second.numImages;
-        height = std::get<MatrixDims::HEIGHT>(image.first);
-        width = std::get<MatrixDims::WIDTH>(image.first);
-        channels = std::get<MatrixDims::CHANNELS>(image.first);
-        stringChannels = (channels == 1) ? "" : std::string(" x ") + std::to_string(channels);
-
+    for (const auto& [matrix, result] : results_) {
+        
+        numImages = result.numImages;
+        
+        height = std::get<MatrixDims::HEIGHT>(matrix);
+        width = std::get<MatrixDims::WIDTH>(matrix);
+        channels = std::get<MatrixDims::CHANNELS>(matrix);
+        
+        stringChannels = (channels == 1) ? "" : " x " + std::to_string(channels);
         configuration = procType + comment_;
 
-        file 
-            PUTCELL(funcline_) 
-            PUTCELL(configuration)
-            PUTCELL("Images processed: " << numImages) 
-            PUTCELL(height << " x " << width << stringChannels) 
-            PUTCELL(iterations_)
-            PUTCELL(floor(image.second.resultMedian / numImages))
-            PUTCELL(floor(image.second.resultMean / numImages))
-            PUTCELL(floor(image.second.resultErrorMargin / numImages))
-            PUTCELL(floor(image.second.resultStd / numImages))
-            LINEND;
+        file                << " | " 
+        << funcline_        << " | " 
+        << configuration    << " | "
+        << "Images processed: " 
+        << numImages        << " | " 
+        << height           << " x " 
+        << width 
+        << stringChannels   << " | " 
+        << iterations_      << " | "
+        << static_cast<int>(std::floor(result.resultMedian / numImages))        << " | "
+        << static_cast<int>(std::floor(result.resultMean / numImages))          << " | "
+        << static_cast<int>(std::floor(result.resultErrorMargin / numImages))   << " | "
+        << static_cast<int>(std::floor(result.resultStd / numImages))           << " |\n";
+
     }
 
     file.close();
 
-#undef SUBHEADER
-#undef HEADER
-#undef PUTCELL
-#undef LINEND
-#undef SEPARATOR
 }
 
 
-template<class T>
+template<typename T>
 void Benchmark<T>::substractNames(std::string& pathMethod) {
 
 	std::string result;
-	std::size_t startPos = pathMethod.find("benchmark_");
-    int offsetPos = 10;
-
-	if (startPos != std::string::npos) {
-		std::size_t endPos = pathMethod.find("_Test", startPos + offsetPos);
-		if (endPos != std::string::npos) {
-			result = pathMethod.substr(startPos + offsetPos, endPos - (startPos + offsetPos));
-		}
-	}
-
-	pathMethod = result;
+	constexpr char benchmark_prefix[] = "benchmark_";
+    constexpr char test_suffix[] = "_Test";
+    constexpr size_t offset = sizeof(benchmark_prefix) - 1;
+    
+    if (auto startPos = pathMethod.find(benchmark_prefix); startPos != std::string::npos) {
+        if (auto endPos = pathMethod.find(test_suffix, startPos + offset); endPos != std::string::npos) {
+            result = pathMethod.substr(startPos + offset, endPos - (startPos + offset));
+        }
+    }
+    
+    pathMethod = result;
 }

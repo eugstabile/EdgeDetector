@@ -5,7 +5,6 @@
  * @version 2.0.0
  * @date 2024-03-18
  * 
- * Copyright (c) 2024, Photonicsens. All rights reserved.
  * 
  */
 

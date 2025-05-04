@@ -1,11 +1,9 @@
 /**
  * @file ZeroCrossingBenchmark.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile 
  * @brief A Fixture Google Test for ZeroCrossingBenchmark.
  * @version 2.0.0
  * @date 2024-04-30
- * 
- * Copyright (c) 2024, Photonicsens. All rights reserved.
  * 
  */
 
@@ -63,8 +61,8 @@ protected:
         zeroCrossing = algorithmFactory->getAlgorithm<IZeroCrossing<B>>(algorithmType);
 
         numOfImages = 1;
-        minHeight = 2415;
-        minWidth = 3269;
+        minHeight = 2015;
+        minWidth = 3060;
         growthFactor = 0;
         slope = 1.f;
         zeroCrossingExpected = 0.15f;

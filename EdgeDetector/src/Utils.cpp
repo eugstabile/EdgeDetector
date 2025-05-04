@@ -143,9 +143,9 @@ void verifyOutput(const std::shared_ptr<Buffer> in, const std::shared_ptr<Buffer
         }
     }
 
-    std::cout << "El numero de diferencias es de: " << countError << std::endl;
-    std::cout << "El numero de numeros distintos de 0 es " << countAll << std::endl;
-    std::cout << "Representa un " << std::fixed << std::setprecision(2) << static_cast<float>(countError) / countAll * 100.f << "% de los numeros distintos de 0. " << std::endl;
+    // std::cout << "El numero de diferencias es de: " << countError << std::endl;
+    // std::cout << "El numero de numeros distintos de 0 es " << countAll << std::endl;
+    // std::cout << "Representa un " << std::fixed << std::setprecision(2) << static_cast<float>(countError) / countAll * 100.f << "% de los numeros distintos de 0. " << std::endl;
 
 }
 

@@ -8,4 +8,4 @@
 	
 [submodule "tvmgenerator"]
 	path = tvmgenerator
-	url = http://git.photonicsens.com/TesisEugenio/tvmgenerator
+	url = http://git.photonicsens.com/TVMEugenio/tvmgenerator

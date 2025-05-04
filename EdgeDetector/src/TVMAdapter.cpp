@@ -7,7 +7,7 @@
 #define HEIGHT Buffer::DimsIndex::HEIGHT
 #define WIDTH Buffer::DimsIndex::WIDTH
 
-std::string pathDir =  "/home/eusta/TesisEugenio/EdgeDetector/Resources/";
+std::string pathDir =  "/home/eusta/TVMEugenio/EdgeDetector/Resources/";
 
 
 TVMAdapter::TVMAdapter(const std::vector<std::string>& algorithms) {
