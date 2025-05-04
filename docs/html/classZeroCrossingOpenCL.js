@@ -1,0 +1,26 @@
+var classZeroCrossingOpenCL =
+[
+    [ "BufferSet", "classZeroCrossingOpenCL.html#aa7770140ff00c6b44c51bebb718b4fb3", null ],
+    [ "ZeroCrossingOpenCL", "classZeroCrossingOpenCL.html#a529fd0093c8695ed4bf9a9cd3b126f57", null ],
+    [ "~ZeroCrossingOpenCL", "classZeroCrossingOpenCL.html#a1996ba3e28526d72ab59d5782355edc1", null ],
+    [ "checkParams", "classZeroCrossingOpenCL.html#ab12c11aa26911f1e6930d1a59054812b", null ],
+    [ "compute", "classZeroCrossingOpenCL.html#a34da04c360a8f4085cbbcdd47b3da1cc", null ],
+    [ "getConfigParams", "classZeroCrossingOpenCL.html#aa91b24886688237bb35f385831c5e850", null ],
+    [ "getZeroCrossingH", "classZeroCrossingOpenCL.html#ade405d873199ab909a24ab460857d607", null ],
+    [ "getZeroCrossingV", "classZeroCrossingOpenCL.html#ada208d833370636ad215e4fffdeb5c6c", null ],
+    [ "prepareBuffers", "classZeroCrossingOpenCL.html#a55d9a7ffd759c8a06b7b467f732ac1a0", null ],
+    [ "setConfigParams", "classZeroCrossingOpenCL.html#adf20e62d5b2d4514300503141c689708", null ],
+    [ "settingArguments", "classZeroCrossingOpenCL.html#a3ca3a5daa27c56729fba857c8f92dae6", null ],
+    [ "confidences_", "classZeroCrossingOpenCL.html#a4e5a71397816fd4661482b8b0e92d242", null ],
+    [ "configParams_", "classZeroCrossingOpenCL.html#a1c0608c29d90189429344d893cf20cc0", null ],
+    [ "derivativeFilter_", "classZeroCrossingOpenCL.html#af46f9f0492e481b593924d260fa27db9", null ],
+    [ "derivativeImage_", "classZeroCrossingOpenCL.html#adbab2dc5e2f162286ea899894f08895a", null ],
+    [ "inPadded_", "classZeroCrossingOpenCL.html#a1aabcfd6e6f19f2b1c210f2d1f4377bc", null ],
+    [ "inTranspose_", "classZeroCrossingOpenCL.html#adb6d2cdadc98739f357d3c316191caea", null ],
+    [ "openCLAdapter_", "classZeroCrossingOpenCL.html#acde58cf1c8e25f0e5ed77b6693af766b", null ],
+    [ "openclParams_", "classZeroCrossingOpenCL.html#a67e98380c11d96a145b1e97939b2460e", null ],
+    [ "upSampledImage_", "classZeroCrossingOpenCL.html#ad33bab319351d9d0e24538cc46a5fbca", null ],
+    [ "upsamplingFilter_", "classZeroCrossingOpenCL.html#a1eca7739db229e2dcf375312ae136e70", null ],
+    [ "zeroCrossings_", "classZeroCrossingOpenCL.html#a2615623d1fa4336828bee2468ed4dbc1", null ],
+    [ "zeroCrossingsMapVTranspose_", "classZeroCrossingOpenCL.html#a4c62d6a88ebffa27af1f756f6e1e2af5", null ]
+];

@@ -1,0 +1,19 @@
+<map id="IZeroCrossing.h" name="IZeroCrossing.h">
+<area shape="rect" id="Node000001" title="Interface to define zero crossing algorithms on differents processors." alt="" coords="371,5,483,32"/>
+<area shape="rect" id="Node000002" href="$CoherentFilterOpenCL_8h.html" title="Calculate edges using the zero crossing algorithm. Apache TVM version." alt="" coords="5,80,166,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="357,38,146,82,145,77,356,32"/>
+<area shape="rect" id="Node000004" href="$ZeroCrossingCPU_8h.html" title="Calculate edges using the zero crossing algorithm." alt="" coords="190,80,325,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="384,41,288,82,286,77,382,36"/>
+<area shape="rect" id="Node000005" href="$ZeroCrossingOpenCL_8h.html" title=" " alt="" coords="349,80,505,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="430,48,430,80,424,80,424,48"/>
+<area shape="rect" id="Node000006" href="$ZeroCrossingOpenMP_8h.html" title="Calculate edges using the zero crossing algorithm. Optimized version." alt="" coords="529,80,688,107"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="473,36,577,77,575,82,472,41"/>
+<area shape="rect" id="Node000007" href="$ZeroCrossingTVM_8h.html" title="Calculate edges using the zero crossing algorithm. Apache TVM version." alt="" coords="713,80,848,107"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="498,32,719,77,718,82,497,37"/>
+<area shape="rect" id="Node000003" href="$AlgorithmFactory_8h.html" title="Factory for the IAlgorithm interface." alt="" coords="361,155,493,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="161,108,368,151,367,157,160,113"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="302,111,398,152,396,156,300,116"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="430,122,430,154,424,154,424,122"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="563,115,460,157,458,152,562,110"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="704,113,489,157,488,151,703,108"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="BufferTVM.h" name="BufferTVM.h">
+<area shape="rect" id="Node000001" title="Interface for the basic data transfer object." alt="" coords="55,5,148,32"/>
+<area shape="rect" id="Node000002" href="$TVMAdapter_8h.html" title="Adapter to TVM library." alt="" coords="5,80,110,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,47,67,81,63,78,84,44"/>
+<area shape="rect" id="Node000003" href="$ZeroCrossingTVM_8h.html" title="Calculate edges using the zero crossing algorithm. Apache TVM version." alt="" coords="34,155,169,181"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="115,46,124,80,125,101,121,122,110,155,105,154,116,120,120,100,119,80,110,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="75,119,96,153,92,156,71,122"/>
+<area shape="rect" id="Node000004" href="$AlgorithmFactory_8h.html" title="Factory for the IAlgorithm interface." alt="" coords="36,229,167,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="104,197,104,229,99,229,99,197"/>
+</map>

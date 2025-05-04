@@ -1,0 +1,26 @@
+<map id="Kernel.h" name="Kernel.h">
+<area shape="rect" id="Node000001" title="Generate kernels filter." alt="" coords="85,5,154,32"/>
+<area shape="rect" id="Node000002" href="$IAlgorithm_8h.html" title="Interface to define the common methods for all algorithms." alt="" coords="74,80,164,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,48,122,80,117,80,117,48"/>
+<area shape="rect" id="Node000003" href="$AlgorithmFactory_8h.html" title="Factory for the IAlgorithm interface." alt="" coords="303,304,434,331"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="82,117,58,134,39,156,22,183,11,207,10,230,23,254,40,268,68,280,141,297,225,307,302,312,302,317,225,312,140,302,66,285,38,273,19,258,5,231,6,206,17,180,34,153,55,130,78,113"/>
+<area shape="rect" id="Node000004" href="$CoherentFilterCPU_8h.html" title="Calculate edges using the zero crossing algorithm." alt="" coords="49,155,189,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="122,122,122,154,117,154,117,122"/>
+<area shape="rect" id="Node000005" href="$IZeroCrossing_8h.html" title="Interface to define zero crossing algorithms on differents processors." alt="" coords="313,155,424,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="178,109,326,151,324,157,176,114"/>
+<area shape="rect" id="Node000006" href="$CoherentFilterOpenCL_8h.html" title="Calculate edges using the zero crossing algorithm. Apache TVM version." alt="" coords="32,229,193,256"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="310,188,158,231,157,226,309,183"/>
+<area shape="rect" id="Node000007" href="$ZeroCrossingCPU_8h.html" title="Calculate edges using the zero crossing algorithm." alt="" coords="217,229,352,256"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="344,194,301,231,297,227,341,190"/>
+<area shape="rect" id="Node000008" href="$ZeroCrossingOpenCL_8h.html" title=" " alt="" coords="376,229,532,256"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="396,189,441,227,437,231,393,194"/>
+<area shape="rect" id="Node000009" href="$ZeroCrossingOpenMP_8h.html" title="Calculate edges using the zero crossing algorithm. Optimized version." alt="" coords="556,229,715,256"/>
+<area shape="poly" id="edge11_Node000005_Node000009" title=" " alt="" coords="430,183,589,226,588,231,429,188"/>
+<area shape="rect" id="Node000010" href="$ZeroCrossingTVM_8h.html" title="Calculate edges using the zero crossing algorithm. Apache TVM version." alt="" coords="740,229,875,256"/>
+<area shape="poly" id="edge13_Node000005_Node000010" title=" " alt="" coords="440,178,739,227,739,233,439,184"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="172,258,324,301,323,306,171,263"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="313,264,356,302,352,306,309,269"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="429,268,385,306,382,302,426,264"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="575,263,416,306,415,301,574,258"/>
+<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="725,260,435,308,434,303,724,255"/>
+</map>

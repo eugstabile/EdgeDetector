@@ -1,0 +1,10 @@
+<map id="OpenCLAdapter.h" name="OpenCLAdapter.h">
+<area shape="rect" id="Node000001" title="Adapter to OpenCL library." alt="" coords="114,5,238,32"/>
+<area shape="rect" id="Node000002" href="$CoherentFilterOpenCL_8h.html" title="Calculate edges using the zero crossing algorithm. Apache TVM version." alt="" coords="5,80,166,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,44,103,82,99,78,147,40"/>
+<area shape="rect" id="Node000004" href="$ZeroCrossingOpenCL_8h.html" title=" " alt="" coords="189,80,345,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="205,40,253,78,250,82,202,44"/>
+<area shape="rect" id="Node000003" href="$AlgorithmFactory_8h.html" title="Factory for the IAlgorithm interface." alt="" coords="111,155,242,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,114,162,152,159,156,111,119"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="241,119,193,156,190,152,238,114"/>
+</map>

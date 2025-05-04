@@ -1,0 +1,15 @@
+<map id="Utils.h" name="Utils.h">
+<area shape="rect" id="Node000001" title="Utilities for zero crossing algorithm." alt="" coords="96,5,154,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,74,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,35,67,72,64,68,108,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="98,80,152,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,33,128,64,122,64,122,33"/>
+<area shape="rect" id="Node000004" href="$Buffer_8h.html" title="Interface for the basic data transfer object." alt="" coords="176,80,242,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="141,31,185,68,181,72,138,35"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="131,155,196,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="203,109,182,143,177,140,199,106"/>
+<area shape="rect" id="Node000006" href="$IBuffer_8h.html" title=" " alt="" coords="220,155,288,181"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="219,106,240,140,236,143,214,109"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="227,229,282,256"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="257,182,257,214,252,214,252,182"/>
+</map>

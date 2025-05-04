@@ -1,0 +1,13 @@
+var searchData=
+[
+  ['data_5f_0',['data_',['../classBuffer.html#a2bd614ea382a1d159b9f403f7df8ae89',1,'Buffer::data_'],['../classBufferTVM.html#af04d50f7419693f885e7fc81af1086ed',1,'BufferTVM::data_']]],
+  ['derivativefilter_5f_1',['derivativeFilter_',['../classKernel.html#a0a2cb68f73fad406d454bc3b5c66231d',1,'Kernel::derivativeFilter_'],['../classZeroCrossingCPU.html#aa8a8db0a7ef6ec0e92191e8e9728f62e',1,'ZeroCrossingCPU::derivativeFilter_'],['../classZeroCrossingOpenCL.html#af46f9f0492e481b593924d260fa27db9',1,'ZeroCrossingOpenCL::derivativeFilter_'],['../classZeroCrossingOpenMP.html#a0d29ab9728d3ab464db561600a7ce020',1,'ZeroCrossingOpenMP::derivativeFilter_'],['../classZeroCrossingTVM.html#a33e7ab4fb70b9aa33cf54b6fa71b73c3',1,'ZeroCrossingTVM::derivativeFilter_']]],
+  ['derivativeimage_5f_2',['derivativeImage_',['../classZeroCrossingCPU.html#a2104e486b40b56ef0585ab6025f69055',1,'ZeroCrossingCPU::derivativeImage_'],['../classZeroCrossingOpenCL.html#adbab2dc5e2f162286ea899894f08895a',1,'ZeroCrossingOpenCL::derivativeImage_'],['../classZeroCrossingOpenMP.html#ab9ed688f031d9a1e363a5c270ebd369b',1,'ZeroCrossingOpenMP::derivativeImage_'],['../classZeroCrossingTVM.html#aa7e476ac003fab77be0a05b4f9849207',1,'ZeroCrossingTVM::derivativeImage_']]],
+  ['device_5fid_3',['device_id',['../structTVMAdapter_1_1TVMParams.html#a0457562b58d89016ecf21e75fb9c4cfb',1,'TVMAdapter::TVMParams']]],
+  ['device_5ftype_4',['device_type',['../structTVMAdapter_1_1TVMParams.html#a95e98e9d101e7f632395e5b8ca99c5dc',1,'TVMAdapter::TVMParams']]],
+  ['devices_5',['devices',['../structOpenCLAdapter_1_1OpenCLParams.html#ac98b57e18e9d8d2d448fb3ddc54e2cfe',1,'OpenCLAdapter::OpenCLParams']]],
+  ['dims_5f_6',['dims_',['../classBuffer.html#a38df843bc27532a83858d3cd46bfefb4',1,'Buffer::dims_'],['../classBufferTVM.html#ac376e1e73e250072f10c7a84d381da9b',1,'BufferTVM::dims_'],['../classCoherentFilterOpenCL.html#a87e29f9a0c411d5e13baac535253139f',1,'CoherentFilterOpenCL::dims_'],['../classOpenCLAdapter.html#a8c6010effeaa0fdde02d20a8a04855d8',1,'OpenCLAdapter::dims_'],['../classTVMAdapter.html#a40c4c41d5000b2af5f4dbfd982d60afa',1,'TVMAdapter::dims_'],['../classZeroCrossingTVM.html#aef274b10a11cab888be8daaff398016f',1,'ZeroCrossingTVM::dims_']]],
+  ['dtype_5fbits_7',['dtype_bits',['../structTVMAdapter_1_1TVMParams.html#adee9ec144a716a78001ca81cac706be9',1,'TVMAdapter::TVMParams']]],
+  ['dtype_5fcode_8',['dtype_code',['../structTVMAdapter_1_1TVMParams.html#a5ccd22aadad1f73374e48d4e262b7f71',1,'TVMAdapter::TVMParams']]],
+  ['dtype_5flanes_9',['dtype_lanes',['../structTVMAdapter_1_1TVMParams.html#a1704659f76c746aba797ea74b69340ff',1,'TVMAdapter::TVMParams']]]
+];

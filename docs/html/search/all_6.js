@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['c_5fcpp_5fproperties_20json_3a_0',['c_cpp_properties.json:',['../index.html#autotoc_md26',1,'']]],
+  ['calculateconfidences_1',['calculateConfidences',['../classZeroCrossingCPU.html#a98bae6fd8968e7b4ba97d100c75498ff',1,'ZeroCrossingCPU']]],
+  ['calculateedges_2',['calculateEdges',['../classZeroCrossingCPU.html#a93c7d223a79b3742830794200740f748',1,'ZeroCrossingCPU::calculateEdges()'],['../classZeroCrossingOpenMP.html#abaf44f380fab090d63613a57ef266023',1,'ZeroCrossingOpenMP::calculateEdges()']]],
+  ['calculateupsampling_3',['calculateUpsampling',['../classZeroCrossingCPU.html#ad6169dc5d6e1275b498320198e547e2a',1,'ZeroCrossingCPU']]],
+  ['changed_4',['Changed',['../md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md9',1,'']]],
+  ['changelog_5',['Changelog',['../md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html',1,'']]],
+  ['changelog_2emd_6',['changelog.md',['../changelog_8md.html',1,'']]],
+  ['checkparams_7',['checkParams',['../classZeroCrossingCPU.html#a5f7490462625d499d160c67c58ba5174',1,'ZeroCrossingCPU::checkParams()'],['../classZeroCrossingOpenCL.html#ab12c11aa26911f1e6930d1a59054812b',1,'ZeroCrossingOpenCL::checkParams()'],['../classZeroCrossingOpenMP.html#ab5235987476967087dc021bff1c6af3c',1,'ZeroCrossingOpenMP::checkParams()'],['../classZeroCrossingTVM.html#aa9cef3fe0d999a828e77e1e50286eec2',1,'ZeroCrossingTVM::checkParams()']]],
+  ['cmakelists_3a_8',['CMakeLists:',['../md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md10',1,'']]],
+  ['coherent_5ffilter_5fopencl_9',['COHERENT_FILTER_OPENCL',['../classAlgorithmFactory.html#a5d1309c341ee1eeca0a9d2064e72bd5ea72b06e3150c0b267dc9e17989885c883',1,'AlgorithmFactory']]],
+  ['coherentfiltercpu_10',['CoherentFilterCPU',['../classCoherentFilterCPU.html',1,'CoherentFilterCPU'],['../classCoherentFilterCPU.html#afae00b62f1b1be1dd331e29d2fc34998',1,'CoherentFilterCPU::CoherentFilterCPU()']]],
+  ['coherentfiltercpu_2eh_11',['CoherentFilterCPU.h',['../CoherentFilterCPU_8h.html',1,'']]],
+  ['coherentfilteropencl_12',['CoherentFilterOpenCL',['../classCoherentFilterOpenCL.html',1,'CoherentFilterOpenCL'],['../classCoherentFilterOpenCL.html#a36e57c322c42df953934a434868d20f4',1,'CoherentFilterOpenCL::CoherentFilterOpenCL()']]],
+  ['coherentfilteropencl_2eh_13',['CoherentFilterOpenCL.h',['../CoherentFilterOpenCL_8h.html',1,'']]],
+  ['combineedges_14',['combineEdges',['../classZeroCrossingCPU.html#a270de8db2b5583ed2f85af1242031c57',1,'ZeroCrossingCPU::combineEdges()'],['../classZeroCrossingOpenMP.html#a78b9f5c02dc2570ea0357df3a9ef624c',1,'ZeroCrossingOpenMP::combineEdges()']]],
+  ['comparebinfiles_15',['compareBinFiles',['../Utils_8h.html#a2c248df8c8dbdc60f8f25592df6d164a',1,'Utils.h']]],
+  ['compute_16',['compute',['../classCoherentFilterCPU.html#aa18685fc3083ef8996275eaa995a57bf',1,'CoherentFilterCPU::compute()'],['../classCoherentFilterOpenCL.html#a162969228af84688c3292f96104976da',1,'CoherentFilterOpenCL::compute()'],['../classIAlgorithm.html#a223b5534e6fa0d9165cce3b27c352811',1,'IAlgorithm::compute()'],['../classZeroCrossingCPU.html#a75cea718c216dddd66e80305e3477707',1,'ZeroCrossingCPU::compute()'],['../classZeroCrossingOpenCL.html#a34da04c360a8f4085cbbcdd47b3da1cc',1,'ZeroCrossingOpenCL::compute()'],['../classZeroCrossingOpenMP.html#ab77f4c717686661a7fae00861bc369e4',1,'ZeroCrossingOpenMP::compute()'],['../classZeroCrossingTVM.html#ac275fb4efe44e781ab9161ab8ea5da54',1,'ZeroCrossingTVM::compute()']]],
+  ['computeopencl_17',['computeOpenCL',['../classOpenCLAdapter.html#a671f5eaf15ad19901c503ba601119ac5',1,'OpenCLAdapter']]],
+  ['computetvm_18',['computeTVM',['../classTVMAdapter.html#ad6dd34fa7cfb1fb9018334d9b5818885',1,'TVMAdapter']]],
+  ['confidences_5f_19',['confidences_',['../classZeroCrossingCPU.html#a19e897ab20188a4a7ee2f4d264f29be6',1,'ZeroCrossingCPU::confidences_'],['../classZeroCrossingOpenCL.html#a4e5a71397816fd4661482b8b0e92d242',1,'ZeroCrossingOpenCL::confidences_'],['../classZeroCrossingTVM.html#a183fcdbba14e2e5f84d088eec1f2ecd9',1,'ZeroCrossingTVM::confidences_']]],
+  ['configparams_20',['ConfigParams',['../structCoherentFilterCPU_1_1ConfigParams.html',1,'CoherentFilterCPU::ConfigParams'],['../structIZeroCrossing_1_1ConfigParams.html',1,'IZeroCrossing&lt; T &gt;::ConfigParams']]],
+  ['configparams_5f_21',['configParams_',['../classCoherentFilterCPU.html#ad4ff00ecef6c872463595b56d795216d',1,'CoherentFilterCPU::configParams_'],['../classZeroCrossingCPU.html#a50cec43378a8cfc5e8a2f8d027244d1d',1,'ZeroCrossingCPU::configParams_'],['../classZeroCrossingOpenCL.html#a1c0608c29d90189429344d893cf20cc0',1,'ZeroCrossingOpenCL::configParams_'],['../classZeroCrossingOpenMP.html#a77e80aa6cc3dbe53503b5d000b110e5c',1,'ZeroCrossingOpenMP::configParams_'],['../classZeroCrossingTVM.html#ac0d7d2f64c43e26bbf40fcbefceac687',1,'ZeroCrossingTVM::configParams_']]],
+  ['context_22',['context',['../structOpenCLAdapter_1_1OpenCLParams.html#a22ba8b78cac4a8276ed076e25dae0d23',1,'OpenCLAdapter::OpenCLParams']]],
+  ['convertrgb2gray_23',['convertRgb2Gray',['../classOpenCVAdapter.html#a3c3c85a67da72934ec623c117c0ef1b1',1,'OpenCVAdapter']]]
+];

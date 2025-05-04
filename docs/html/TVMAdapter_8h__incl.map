@@ -1,0 +1,30 @@
+<map id="TVMAdapter.h" name="TVMAdapter.h">
+<area shape="rect" id="Node000001" title="Adapter to TVM library." alt="" coords="442,5,546,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,88,151,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="442,31,163,83,144,87,143,81,161,77,441,26"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="174,88,321,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="456,35,301,85,300,80,455,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="344,80,479,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="483,34,445,71,441,68,479,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="502,80,651,123"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="509,31,547,68,543,71,505,34"/>
+<area shape="rect" id="Node000006" href="$BufferTVM_8h.html" title="Interface for the basic data transfer object." alt="" coords="676,88,768,115"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="531,30,673,80,671,85,529,35"/>
+<area shape="rect" id="Node000010" href="$Utils_8h.html" title="Utilities for zero crossing algorithm." alt="" coords="822,88,881,115"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="547,27,781,77,808,84,807,90,780,83,546,32"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="573,171,685,197"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="709,117,656,163,653,159,706,113"/>
+<area shape="rect" id="Node000008" href="$IBuffer_8h.html" title=" " alt="" coords="764,245,832,272"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="726,114,734,152,750,196,776,232,772,235,745,199,729,154,721,115"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="770,320,826,347"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="801,273,801,304,795,304,795,273"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="760,171,828,197"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="845,117,814,160,809,157,840,114"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="853,171,906,197"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="858,114,873,155,868,157,853,116"/>
+<area shape="rect" id="Node000013" href="$Buffer_8h.html" title="Interface for the basic data transfer object." alt="" coords="931,171,996,197"/>
+<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="870,113,936,160,932,164,867,117"/>
+<area shape="poly" id="edge14_Node000013_Node000008" title=" " alt="" coords="936,200,842,241,840,236,933,195"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="931,245,996,272"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="966,198,966,230,961,230,961,198"/>
+</map>

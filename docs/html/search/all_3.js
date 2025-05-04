@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['_5falgorithm_5fh_0',['_ALGORITHM_H',['../IAlgorithm_8h.html#a01de67b2f1a693166cbf2831c31cb172',1,'IAlgorithm.h']]],
+  ['_5falgorithmfactory_5fh_1',['_ALGORITHMFACTORY_H',['../AlgorithmFactory_8h.html#ae8ae9d1516ef34051a747445236c39bc',1,'AlgorithmFactory.h']]],
+  ['_5fbuffer_5fh_2',['_BUFFER_H',['../Buffer_8h.html#a23067b035369b13812a7838f3b3b9b7c',1,'Buffer.h']]],
+  ['_5fbuffertvm_5fh_3',['_BUFFERTVM_H',['../BufferTVM_8h.html#a8e2a0301fcf28a747784a7f2476fd57f',1,'BufferTVM.h']]],
+  ['_5fcoherent_5ffilter_5fcpu_5fh_4',['_COHERENT_FILTER_CPU_H',['../CoherentFilterCPU_8h.html#a3ab1e410dca1257d8a6f1ed4a496cefa',1,'CoherentFilterCPU.h']]],
+  ['_5fedgedetectorexception_5fh_5',['_EDGEDETECTOREXCEPTION_H',['../EdgeDetectorException_8h.html#a6f78c6ccd466039929a3e1f37a76369b',1,'EdgeDetectorException.h']]],
+  ['_5fibuffer_5fh_6',['_IBUFFER_H',['../IBuffer_8h.html#aad2ac7cdf40341f55e2d5d5db4c2706a',1,'IBuffer.h']]],
+  ['_5fizerocrossing_5fh_7',['_IZEROCROSSING_H',['../IZeroCrossing_8h.html#ab1132b7b79ca10f93459514975e69b98',1,'IZeroCrossing.h']]],
+  ['_5fkernels_5fh_8',['_KERNELS_H',['../Kernel_8h.html#ab36c8593117f549fa80961cbdd650ddc',1,'Kernel.h']]],
+  ['_5fopencladapter_5fh_9',['_OPENCLADAPTER_H',['../OpenCLAdapter_8h.html#afca89c4e0b99d6887ce93caaec8f765c',1,'OpenCLAdapter.h']]],
+  ['_5fopencvadapter_5fh_10',['_OPENCVADAPTER_H',['../OpenCVAdapter_8h.html#a7565b15b9f73ea8e9da3660c58cd6c8b',1,'OpenCVAdapter.h']]],
+  ['_5fsynthetic_5fkernel_5fh_11',['_SYNTHETIC_KERNEL_H',['../SyntheticMatrix_8h.html#a9c66827b6a61fa60d129cf683f56ee8f',1,'SyntheticMatrix.h']]],
+  ['_5ftvmadapter_5fh_12',['_TVMADAPTER_H',['../TVMAdapter_8h.html#a8fb315de91ce68ff989f65e5a6606822',1,'TVMAdapter.h']]],
+  ['_5futils_5fh_13',['_UTILS_H',['../Utils_8h.html#a3e3bd30c4a758372b1976a8a985cab65',1,'Utils.h']]],
+  ['_5fzero_5fcrossing_5fcpu_5fh_14',['_ZERO_CROSSING_CPU_H',['../ZeroCrossingCPU_8h.html#accff68d237235ad300af6f9327240b29',1,'ZeroCrossingCPU.h']]],
+  ['_5fzero_5fcrossing_5fopencl_5fh_15',['_ZERO_CROSSING_OPENCL_H',['../ZeroCrossingOpenCL_8h.html#ad861e18fe44199a7010ac1707264a8b0',1,'ZeroCrossingOpenCL.h']]],
+  ['_5fzero_5fcrossing_5fopenmp_5fh_16',['_ZERO_CROSSING_OPENMP_H',['../ZeroCrossingOpenMP_8h.html#aae3595c2c18b2d32f785a358babcf247',1,'ZeroCrossingOpenMP.h']]]
+];

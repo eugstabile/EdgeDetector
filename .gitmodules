@@ -1,0 +1,11 @@
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/google/googletest
+
+[submodule "tvm"]
+	path = tvm
+	url = https://github.com/apache/tvm.git
+	
+[submodule "tvmgenerator"]
+	path = tvmgenerator
+	url = http://git.photonicsens.com/TesisEugenio/tvmgenerator

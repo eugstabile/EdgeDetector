@@ -1,0 +1,21 @@
+<map id="OpenTVMAdapter.h" name="OpenTVMAdapter.h">
+<area shape="rect" id="Node000001" title="Adapter to OpenTVM library." alt="" coords="142,5,277,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,88,118,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,35,99,83,97,78,185,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="142,80,277,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,33,212,65,207,65,207,33"/>
+<area shape="rect" id="Node000004" href="$Utils_8h.html" title="Utilities for zero crossing algorithm." alt="" coords="300,88,359,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="230,30,300,77,297,82,227,35"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="250,171,318,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="325,116,301,159,296,156,320,114"/>
+<area shape="rect" id="Node000006" href="$Buffer_8h.html" title="Interface for the basic data transfer object." alt="" coords="342,171,408,197"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="339,114,363,156,358,159,334,116"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="279,245,335,272"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="365,200,331,236,327,232,361,196"/>
+<area shape="rect" id="Node000008" href="$EdgeDetectorException_8h.html" title="Generic exception for EdgeDetector error handling." alt="" coords="358,245,528,272"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="389,196,423,232,419,236,385,200"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="359,320,436,347"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="437,274,416,308,411,305,433,271"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="460,320,514,347"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="453,271,474,305,469,308,448,274"/>
+</map>

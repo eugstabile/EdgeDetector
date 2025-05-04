@@ -1,0 +1,21 @@
+<map id="OpenCVAdapter.h" name="OpenCVAdapter.h">
+<area shape="rect" id="Node000001" title="Adapter to OpenCV library to manage the input/output image." alt="" coords="104,5,230,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,67,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,35,74,74,71,70,143,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="91,80,242,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,33,169,64,164,64,164,33"/>
+<area shape="rect" id="Node000004" href="$Utils_8h.html" title="Utilities for zero crossing algorithm." alt="" coords="267,80,325,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="190,30,261,70,259,74,188,35"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="177,155,245,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="283,109,238,147,235,143,279,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="269,155,323,181"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="299,107,299,139,293,139,293,107"/>
+<area shape="rect" id="Node000007" href="$Buffer_8h.html" title="Interface for the basic data transfer object." alt="" coords="347,155,413,181"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="312,105,356,142,352,146,309,109"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="303,229,367,256"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="374,183,353,217,348,215,370,180"/>
+<area shape="rect" id="Node000009" href="$IBuffer_8h.html" title=" " alt="" coords="391,229,460,256"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="390,180,412,215,407,217,386,183"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="398,304,453,331"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="428,257,428,288,423,288,423,257"/>
+</map>

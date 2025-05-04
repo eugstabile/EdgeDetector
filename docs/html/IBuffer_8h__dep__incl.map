@@ -1,0 +1,50 @@
+<map id="IBuffer.h" name="IBuffer.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="510,5,578,32"/>
+<area shape="rect" id="Node000002" href="$AlgorithmFactory_8h.html" title="Factory for the IAlgorithm interface." alt="" coords="421,453,552,480"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="495,26,362,38,282,49,201,63,127,82,65,105,42,119,24,134,13,150,9,167,9,319,10,367,17,385,34,403,61,419,102,432,206,450,321,459,420,463,420,468,320,465,205,456,100,438,59,424,30,407,13,388,5,368,4,319,4,166,8,148,20,130,39,115,63,101,125,77,200,58,281,43,362,32,494,20"/>
+<area shape="rect" id="Node000003" href="$Buffer_8h.html" title="Interface for the basic data transfer object." alt="" coords="511,80,577,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="547,48,547,80,541,80,541,48"/>
+<area shape="rect" id="Node000018" href="$BufferTVM_8h.html" title="Interface for the basic data transfer object." alt="" coords="794,155,886,181"/>
+<area shape="poly" id="edge28_Node000001_Node000018" title=" " alt="" coords="584,37,816,152,814,157,582,42"/>
+<area shape="rect" id="Node000004" href="$Kernel_8h.html" title="Generate kernels filter." alt="" coords="553,155,623,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="562,119,583,153,578,156,557,122"/>
+<area shape="rect" id="Node000013" href="$OpenCLAdapter_8h.html" title="Adapter to OpenCL library." alt="" coords="240,304,365,331"/>
+<area shape="poly" id="edge18_Node000003_Node000013" title=" " alt="" coords="498,114,457,133,412,159,368,192,330,231,320,249,313,269,306,304,301,303,307,267,315,247,326,228,364,188,409,155,455,129,496,110"/>
+<area shape="rect" id="Node000014" href="$SyntheticMatrix_8h.html" title="Generate synthetic image with an edge." alt="" coords="646,155,770,181"/>
+<area shape="poly" id="edge21_Node000003_Node000014" title=" " alt="" coords="588,111,680,152,678,156,585,116"/>
+<area shape="rect" id="Node000015" href="$Utils_8h.html" title="Utilities for zero crossing algorithm." alt="" coords="471,155,529,181"/>
+<area shape="poly" id="edge22_Node000003_Node000015" title=" " alt="" coords="531,122,510,156,505,153,526,119"/>
+<area shape="rect" id="Node000005" href="$IAlgorithm_8h.html" title="Interface to define the common methods for all algorithms." alt="" coords="543,229,633,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="591,197,591,229,585,229,585,197"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="649,257,687,275,721,302,740,328,753,354,754,380,741,407,728,418,710,427,663,442,553,461,552,456,661,437,708,422,725,413,737,404,749,379,748,355,736,331,717,306,684,279,647,262"/>
+<area shape="rect" id="Node000006" href="$CoherentFilterCPU_8h.html" title="Calculate edges using the zero crossing algorithm." alt="" coords="566,304,706,331"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="607,268,630,302,625,305,602,271"/>
+<area shape="rect" id="Node000007" href="$IZeroCrossing_8h.html" title="Interface to define zero crossing algorithms on differents processors." alt="" coords="431,304,542,331"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="559,268,506,306,503,301,556,263"/>
+<area shape="rect" id="Node000008" href="$CoherentFilterOpenCL_8h.html" title="Calculate edges using the zero crossing algorithm. Apache TVM version." alt="" coords="222,379,383,405"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="441,339,336,381,334,376,439,334"/>
+<area shape="rect" id="Node000009" href="$ZeroCrossingCPU_8h.html" title="Calculate edges using the zero crossing algorithm." alt="" coords="591,379,726,405"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="531,335,629,376,627,380,529,339"/>
+<area shape="rect" id="Node000010" href="$ZeroCrossingOpenCL_8h.html" title=" " alt="" coords="44,379,199,405"/>
+<area shape="poly" id="edge12_Node000007_Node000010" title=" " alt="" coords="416,335,186,381,184,375,415,330"/>
+<area shape="rect" id="Node000011" href="$ZeroCrossingOpenMP_8h.html" title="Calculate edges using the zero crossing algorithm. Optimized version." alt="" coords="407,379,566,405"/>
+<area shape="poly" id="edge14_Node000007_Node000011" title=" " alt="" coords="489,346,489,378,484,378,484,346"/>
+<area shape="rect" id="Node000012" href="$ZeroCrossingTVM_8h.html" title="Calculate edges using the zero crossing algorithm. Apache TVM version." alt="" coords="802,379,937,405"/>
+<area shape="poly" id="edge16_Node000007_Node000012" title=" " alt="" coords="558,329,803,375,802,381,557,335"/>
+<area shape="poly" id="edge9_Node000008_Node000002" title=" " alt="" coords="350,409,455,450,453,455,348,414"/>
+<area shape="poly" id="edge11_Node000009_Node000002" title=" " alt="" coords="616,414,518,455,516,450,614,409"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="201,406,423,450,422,455,200,412"/>
+<area shape="poly" id="edge15_Node000011_Node000002" title=" " alt="" coords="489,421,489,453,484,453,484,421"/>
+<area shape="poly" id="edge17_Node000012_Node000002" title=" " alt="" coords="788,411,553,456,552,450,787,406"/>
+<area shape="poly" id="edge19_Node000013_Node000008" title=" " alt="" coords="305,346,305,378,300,378,300,346"/>
+<area shape="poly" id="edge20_Node000013_Node000010" title=" " alt="" coords="258,339,154,381,152,376,256,334"/>
+<area shape="poly" id="edge23_Node000015_Node000005" title=" " alt="" coords="529,189,574,227,571,231,525,194"/>
+<area shape="poly" id="edge24_Node000015_Node000013" title=" " alt="" coords="502,197,496,228,479,258,454,279,425,294,366,312,364,307,423,289,451,274,475,254,491,226,497,196"/>
+<area shape="rect" id="Node000016" href="$OpenCVAdapter_8h.html" title="Adapter to OpenCV library to manage the input/output image." alt="" coords="339,229,466,256"/>
+<area shape="poly" id="edge25_Node000015_Node000016" title=" " alt="" coords="473,193,421,231,418,227,469,189"/>
+<area shape="rect" id="Node000017" href="$TVMAdapter_8h.html" title="Adapter to TVM library." alt="" coords="728,229,832,256"/>
+<area shape="poly" id="edge26_Node000015_Node000017" title=" " alt="" coords="545,179,728,226,727,231,544,185"/>
+<area shape="poly" id="edge27_Node000017_Node000012" title=" " alt="" coords="798,268,864,377,859,380,793,271"/>
+<area shape="poly" id="edge30_Node000018_Node000012" title=" " alt="" coords="846,196,870,378,865,379,841,197"/>
+<area shape="poly" id="edge29_Node000018_Node000017" title=" " alt="" coords="822,195,792,231,788,227,818,192"/>
+</map>

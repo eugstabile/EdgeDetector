@@ -1,0 +1,9 @@
+.vs
+build
+*.drawio
+*.drawio.bkp
+projectCpp
+!Resources/parrot.jpg
+!Resources/ajedrez.jpg
+/Resources/Benchmarking.md
+tracy

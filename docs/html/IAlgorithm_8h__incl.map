@@ -1,0 +1,20 @@
+<map id="IAlgorithm.h" name="IAlgorithm.h">
+<area shape="rect" id="Node000001" title="Interface to define the common methods for all algorithms." alt="" coords="122,5,213,32"/>
+<area shape="rect" id="Node000002" href="$Utils_8h.html" title="Utilities for zero crossing algorithm." alt="" coords="94,80,153,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,34,141,68,137,65,158,31"/>
+<area shape="rect" id="Node000009" href="$Kernel_8h.html" title="Generate kernels filter." alt="" coords="177,80,246,107"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="177,31,198,65,194,68,173,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,74,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,109,67,146,64,142,107,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="98,155,152,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="126,107,127,139,122,139,121,107"/>
+<area shape="rect" id="Node000005" href="$Buffer_8h.html" title="Interface for the basic data transfer object." alt="" coords="178,155,243,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="140,105,185,143,182,147,137,109"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="133,229,197,256"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="205,183,183,217,179,215,200,180"/>
+<area shape="rect" id="Node000007" href="$IBuffer_8h.html" title=" " alt="" coords="221,229,290,256"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="220,180,242,215,237,217,216,183"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="228,304,283,331"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="258,257,258,288,253,288,253,257"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="214,107,213,139,208,139,209,107"/>
+</map>

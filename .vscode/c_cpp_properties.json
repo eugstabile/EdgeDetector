@@ -1,0 +1,49 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/EdgeDetector/include",
+                "${workspaceFolder}/googletest/googletest/include",
+                "${OPENCV_PATH}/include",
+                "C:/Users/EugenioStabile.MSI-ES/apacheTVM/include",
+                "C:/Users/EugenioStabile.MSI-ES/apacheTVM/3rdparty/dlpack/include",
+                "C:/Users/EugenioStabile.MSI-ES/apacheTVM/3rdparty/dmlc-core/include",
+                "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22000.0",
+            "compilerPath": "${MSVC_PATH}",
+            "cStandard": "c17",
+            "intelliSenseMode": "windows-msvc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/EdgeDetector/include",
+                "${workspaceFolder}/googletest/googletest/include",
+                "/usr/local/include/opencv4",
+                "${workspaceFolder}/tvm/include",
+                "${workspaceFolder}/tvm/3rdparty/dlpack/include",
+                "${workspaceFolder}/tvm/3rdparty/dmlc-core/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "/usr/bin/clang-14",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-clang-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

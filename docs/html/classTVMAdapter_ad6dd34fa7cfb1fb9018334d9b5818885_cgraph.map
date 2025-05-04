@@ -1,0 +1,5 @@
+<map id="TVMAdapter::computeTVM" name="TVMAdapter::computeTVM">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,184,32"/>
+<area shape="rect" id="Node000002" href="$classTVMAdapter.html#ac0f3165f04519b29e81f42d8893fd0da" title="Get the Tensor object. Obtiene los buffers de entrada y salida, identifica el kernel de TVM y lo ejec..." alt="" coords="232,5,390,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,16,216,16,216,21,184,21"/>
+</map>

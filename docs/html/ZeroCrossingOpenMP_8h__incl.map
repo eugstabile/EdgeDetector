@@ -1,0 +1,26 @@
+<map id="ZeroCrossingOpenMP.h" name="ZeroCrossingOpenMP.h">
+<area shape="rect" id="Node000001" title="Calculate edges using the zero crossing algorithm. Optimized version." alt="" coords="30,5,189,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,91,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,34,70,70,66,66,97,31"/>
+<area shape="rect" id="Node000003" href="$IZeroCrossing_8h.html" title="Interface to define zero crossing algorithms on differents processors." alt="" coords="115,80,226,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,31,152,66,148,70,118,34"/>
+<area shape="rect" id="Node000004" href="$IAlgorithm_8h.html" title="Interface to define the common methods for all algorithms." alt="" coords="126,155,216,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="173,107,173,139,168,139,168,107"/>
+<area shape="rect" id="Node000005" href="$Utils_8h.html" title="Utilities for zero crossing algorithm." alt="" coords="98,229,156,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="165,183,144,217,140,215,161,180"/>
+<area shape="rect" id="Node000012" href="$Kernel_8h.html" title="Generate kernels filter." alt="" coords="180,229,249,256"/>
+<area shape="poly" id="edge11_Node000004_Node000012" title=" " alt="" coords="181,180,201,215,197,217,176,183"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="9,304,77,331"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="114,259,70,296,67,292,110,255"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="101,304,155,331"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="130,256,130,288,125,288,124,257"/>
+<area shape="rect" id="Node000008" href="$Buffer_8h.html" title="Interface for the basic data transfer object." alt="" coords="181,304,246,331"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="143,254,189,292,185,296,140,259"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="136,379,200,405"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="208,333,186,367,182,364,203,330"/>
+<area shape="rect" id="Node000010" href="$IBuffer_8h.html" title=" " alt="" coords="225,379,293,405"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="223,330,245,364,240,367,219,333"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="231,453,286,480"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="261,406,261,438,256,438,256,406"/>
+<area shape="poly" id="edge12_Node000012_Node000008" title=" " alt="" coords="217,257,217,288,211,288,212,256"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ZeroCrossingOpenMP.h" name="ZeroCrossingOpenMP.h">
+<area shape="rect" id="Node000001" title="Calculate edges using the zero crossing algorithm. Optimized version." alt="" coords="5,5,165,32"/>
+<area shape="rect" id="Node000002" href="$AlgorithmFactory_8h.html" title="Factory for the IAlgorithm interface." alt="" coords="19,80,151,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,48,88,80,82,80,82,48"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="CoherentFilterTVM.h" name="CoherentFilterTVM.h">
+<area shape="rect" id="Node000001" title="Calculate edges using the zero crossing algorithm. Apache TVM version." alt="" coords="5,5,146,32"/>
+<area shape="rect" id="Node000002" href="$AlgorithmFactory_8h.html" title="Factory for the IAlgorithm interface." alt="" coords="10,80,141,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,48,78,80,73,80,73,48"/>
+</map>

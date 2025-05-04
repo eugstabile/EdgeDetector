@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['zc_5finit_0',['zc_init',['../structSyntheticMatrix_1_1SyntheticDims.html#aa05500f52224a58bb849025112cfd5c1',1,'SyntheticMatrix::SyntheticDims']]],
+  ['zero_5fcrossing_5fcpu_1',['ZERO_CROSSING_CPU',['../classAlgorithmFactory.html#a5d1309c341ee1eeca0a9d2064e72bd5eac7a9f8e886fa2f0319e5610dafb519f5',1,'AlgorithmFactory']]],
+  ['zero_5fcrossing_5fopen_5fmp_2',['ZERO_CROSSING_OPEN_MP',['../classAlgorithmFactory.html#a5d1309c341ee1eeca0a9d2064e72bd5eaa5e0995751a73662c7d835c2ff82207d',1,'AlgorithmFactory']]],
+  ['zero_5fcrossing_5fopencl_3',['ZERO_CROSSING_OPENCL',['../classAlgorithmFactory.html#a5d1309c341ee1eeca0a9d2064e72bd5ea7ac24a997676d2ef3940e40fba37d130',1,'AlgorithmFactory']]],
+  ['zero_5fcrossing_5ftvm_4',['ZERO_CROSSING_TVM',['../classAlgorithmFactory.html#a5d1309c341ee1eeca0a9d2064e72bd5ea672af59f49f28a2d1e6fc2577ea6a5eb',1,'AlgorithmFactory']]],
+  ['zerocrossingcpu_5',['ZeroCrossingCPU',['../classZeroCrossingCPU.html',1,'ZeroCrossingCPU'],['../classZeroCrossingCPU.html#af4d47932513c1321d2e8044509233008',1,'ZeroCrossingCPU::ZeroCrossingCPU()']]],
+  ['zerocrossingcpu_2eh_6',['ZeroCrossingCPU.h',['../ZeroCrossingCPU_8h.html',1,'']]],
+  ['zerocrossingcpu_3a_7',['ZeroCrossingCPU:',['../md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md5',1,'ZeroCrossingCPU:'],['../md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md12',1,'ZeroCrossingCPU:'],['../md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md16',1,'ZeroCrossingCPU:']]],
+  ['zerocrossingopencl_8',['ZeroCrossingOpenCL',['../classZeroCrossingOpenCL.html',1,'ZeroCrossingOpenCL'],['../classZeroCrossingOpenCL.html#a529fd0093c8695ed4bf9a9cd3b126f57',1,'ZeroCrossingOpenCL::ZeroCrossingOpenCL()']]],
+  ['zerocrossingopencl_2eh_9',['ZeroCrossingOpenCL.h',['../ZeroCrossingOpenCL_8h.html',1,'']]],
+  ['zerocrossingopenmp_10',['ZeroCrossingOpenMP',['../classZeroCrossingOpenMP.html',1,'ZeroCrossingOpenMP'],['../classZeroCrossingOpenMP.html#a9a2686aa869f13ecbb338dd4fa412eb1',1,'ZeroCrossingOpenMP::ZeroCrossingOpenMP()']]],
+  ['zerocrossingopenmp_2eh_11',['ZeroCrossingOpenMP.h',['../ZeroCrossingOpenMP_8h.html',1,'']]],
+  ['zerocrossingopenmp_3a_12',['ZeroCrossingOpenMP:',['../md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md6',1,'']]],
+  ['zerocrossings_5f_13',['zeroCrossings_',['../classZeroCrossingCPU.html#a8c52693e37bffaa99d19bd44b2666b9c',1,'ZeroCrossingCPU::zeroCrossings_'],['../classZeroCrossingOpenCL.html#a2615623d1fa4336828bee2468ed4dbc1',1,'ZeroCrossingOpenCL::zeroCrossings_'],['../classZeroCrossingOpenMP.html#afce67ca3179cd5c9114501d40a59f849',1,'ZeroCrossingOpenMP::zeroCrossings_'],['../classZeroCrossingTVM.html#af00d85aa3adabd38bb4a767e015f4efc',1,'ZeroCrossingTVM::zeroCrossings_']]],
+  ['zerocrossingsmapvtranspose_5f_14',['zeroCrossingsMapVTranspose_',['../classZeroCrossingOpenCL.html#a4c62d6a88ebffa27af1f756f6e1e2af5',1,'ZeroCrossingOpenCL::zeroCrossingsMapVTranspose_'],['../classZeroCrossingTVM.html#af13d466bf3023931abb27880582fd0f5',1,'ZeroCrossingTVM::zeroCrossingsMapVTranspose_']]],
+  ['zerocrossingtvm_15',['ZeroCrossingTVM',['../classZeroCrossingTVM.html',1,'ZeroCrossingTVM'],['../classZeroCrossingTVM.html#a86408a7b224756c3151a1164648c68a2',1,'ZeroCrossingTVM::ZeroCrossingTVM()']]],
+  ['zerocrossingtvm_2eh_16',['ZeroCrossingTVM.h',['../ZeroCrossingTVM_8h.html',1,'']]]
+];
