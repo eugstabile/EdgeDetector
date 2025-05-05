@@ -7,8 +7,12 @@
 #define HEIGHT Buffer::DimsIndex::HEIGHT
 #define WIDTH Buffer::DimsIndex::WIDTH
 
+constexpr float LUMA_RED_FACTOR = 0.2989360212937f;
+constexpr float LUMA_GREEN_FACTOR = 0.5870430744511f;
+constexpr float LUMA_BLUE_FACTOR = 0.1140209042551f;
 
-std::shared_ptr<Buffer> OpenCVAdapter::obtainImage(const std::string path) {
+
+std::shared_ptr<Buffer> OpenCVAdapter::obtainImage(const std::string& path) {
 
     cv::Mat input = cv::imread(imageFolder_ + path + pathFormat_, cv::IMREAD_UNCHANGED);
 
@@ -27,7 +31,7 @@ std::shared_ptr<Buffer> OpenCVAdapter::obtainImage(const std::string path) {
 }
 
 
-void OpenCVAdapter::saveImage(std::shared_ptr<Buffer> inputImage, std::string imageName) {
+void OpenCVAdapter::saveImage(const std::shared_ptr<Buffer>& inputImage, const std::string& imageName) {
        
     std::shared_ptr<Buffer> inputCopy = std::make_shared<Buffer>(*inputImage);
     std::vector<int64_t> dimsImage = inputCopy->getDims();
@@ -52,7 +56,7 @@ void OpenCVAdapter::saveImage(std::shared_ptr<Buffer> inputImage, std::string im
 }
 
 
-void OpenCVAdapter::showImage(std::shared_ptr<Buffer> inputImage, std::string titleWindow) {
+void OpenCVAdapter::showImage(const std::shared_ptr<Buffer>& inputImage, const std::string& titleWindow) {
 
     std::vector<int64_t> dimsImage = inputImage->getDims();
     int height = static_cast<int64_t>(dimsImage[HEIGHT]);
@@ -71,7 +75,7 @@ void OpenCVAdapter::showImage(std::shared_ptr<Buffer> inputImage, std::string ti
 }
 
 
-cv::Mat OpenCVAdapter::bufferToMat(std::shared_ptr<Buffer> inputImage) {
+cv::Mat OpenCVAdapter::bufferToMat(const std::shared_ptr<Buffer>& inputImage) {
     
     std::vector<int64_t> dimsImage = inputImage->getDims();
     int height = static_cast<int64_t>(dimsImage[HEIGHT]);
@@ -96,11 +100,6 @@ std::shared_ptr<Buffer> OpenCVAdapter::matToBuffer(cv::Mat& image) {
 
 std::shared_ptr<Buffer> OpenCVAdapter::convertRgb2Gray(const cv::Mat& imageRgb) {
 	
-    const float LUMA_RED_FACTOR = 0.2989360212937f;
-    const float LUMA_GREEN_FACTOR = 0.5870430744511f;
-    const float LUMA_BLUE_FACTOR = 0.1140209042551f;
-
-
 	std::vector<cv::Mat> channels(3);
 	cv::split(imageRgb, channels);
 	cv::Mat blueCh = channels[0];

@@ -814,3 +814,8 @@
 | zeroCrossing_realImage | OPEN_CL | Images processed: 1 | 1920 x 1277 | 20 | 331300 | 481235 | 133010 | 303490 |
 | zeroCrossing_realImage | OPEN_CL | Images processed: 1 | 3000 x 3000 | 20 | 363469 | 3151528 | 2167179 | 4944857 |
 | zeroCrossing_syntheticImage | OPEN_CL | Images processed: 1 | 2015 x 3060 | 20 | 1850094 | 1852350 | 4350 | 9927 |
+| zeroCrossing_realImage | CPU | Images processed: 1 | 800 x 1067 | 20 | 86038 | 86782 | 1394 | 3182 |
+| zeroCrossing_realImage | CPU | Images processed: 1 | 1100 x 1100 | 20 | 120698 | 121048 | 62752 | 143182 |
+| zeroCrossing_realImage | CPU | Images processed: 1 | 1920 x 1277 | 20 | 177054 | 260003 | 75937 | 173267 |
+| zeroCrossing_realImage | CPU | Images processed: 1 | 3000 x 3000 | 20 | 189647 | 1011146 | 651892 | 1487424 |
+| zeroCrossing_syntheticImage | CPU | Images processed: 1 | 2015 x 3060 | 20 | 625821 | 627407 | 2894 | 6604 |

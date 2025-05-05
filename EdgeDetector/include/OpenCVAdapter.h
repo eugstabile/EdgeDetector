@@ -33,7 +33,7 @@ public:
      * @param path 
      * @return std::shared_ptr<Buffer> 
      */
-    std::shared_ptr<Buffer> obtainImage(const std::string path);
+    std::shared_ptr<Buffer> obtainImage(const std::string& path);
     
     /**
      * @brief This function stores an image with the designed name
@@ -41,7 +41,7 @@ public:
      * @param inputImage 
      * @param imageName 
      */
-    void saveImage(std::shared_ptr<Buffer> inputImage, std::string imageName);
+    void saveImage(const std::shared_ptr<Buffer>& inputImage, const std::string& imageName);
     
     /**
      * @brief This function displays an Buffer object using OpenCV.
@@ -49,7 +49,7 @@ public:
      * @param inputImage 
      * @param titleWindow 
      */
-    void showImage(std::shared_ptr<Buffer> inputImage, std::string titleWindow);
+    void showImage(const std::shared_ptr<Buffer>& inputImage, const std::string& titleWindow);
     
     /**
      * @brief This fuction transforms a T object into a CV::Mat 
@@ -57,7 +57,7 @@ public:
      * @param inputImage 
      * @return cv::Mat 
      */
-    cv::Mat bufferToMat(std::shared_ptr<Buffer> inputImage);
+    cv::Mat bufferToMat(const std::shared_ptr<Buffer>& inputImage);
 
     /**
      * @brief This fuction transforms a CV::Mat into a Buffer object 
