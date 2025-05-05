@@ -25,7 +25,7 @@ ZeroCrossingTVM::ZeroCrossingTVM() {
 }
 
 
-void ZeroCrossingTVM::compute(std::shared_ptr<BufferTVM> in, std::shared_ptr<BufferTVM> out) {    
+void ZeroCrossingTVM::compute(const std::shared_ptr<BufferTVM>& in, std::shared_ptr<BufferTVM>& out) {    
 
     // Horizontal edge computation
     tvmAdapter_->computeTVM("filterDerivative", in, derivativeFilter_, derivativeImage_.h);
@@ -47,7 +47,7 @@ void ZeroCrossingTVM::compute(std::shared_ptr<BufferTVM> in, std::shared_ptr<Buf
 }
 
 
-void ZeroCrossingTVM::settingArguments(std::shared_ptr<BufferTVM> in, std::shared_ptr<BufferTVM> out, const ConfigParams& configParams) {
+void ZeroCrossingTVM::settingArguments(const std::shared_ptr<BufferTVM>& in, std::shared_ptr<BufferTVM>& out, const ConfigParams& configParams) {
 
     checkParams(in, out, configParams);
     setConfigParams(configParams);
@@ -71,7 +71,7 @@ void ZeroCrossingTVM::settingArguments(std::shared_ptr<BufferTVM> in, std::share
 }
 
 
-void ZeroCrossingTVM::checkParams(std::shared_ptr<BufferTVM> in, std::shared_ptr<BufferTVM> out, const ConfigParams& configParams) {
+void ZeroCrossingTVM::checkParams(const std::shared_ptr<BufferTVM>& in, std::shared_ptr<BufferTVM>& out, const ConfigParams& configParams) {
 
     std::vector<int64_t> inputDims = in->getDims();
     std::vector<int64_t> outputDims = out->getDims();
@@ -121,7 +121,7 @@ void ZeroCrossingTVM::setConfigParams(const ConfigParams& configParams) {
 }
 
 
-void ZeroCrossingTVM::prepareBuffers(BufferSet& bufferset, std::vector<int64_t>& dimsH, std::vector<int64_t>& dimsV) {
+void ZeroCrossingTVM::prepareBuffers(BufferSet& bufferset, const std::vector<int64_t>& dimsH, const std::vector<int64_t>& dimsV) {
   
     bufferset.h = std::make_shared<BufferTVM>(dimsH[HEIGHT], dimsH[WIDTH]);
     bufferset.v = std::make_shared<BufferTVM>(dimsV[HEIGHT], dimsV[WIDTH]);

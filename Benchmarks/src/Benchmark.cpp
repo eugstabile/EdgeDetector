@@ -254,7 +254,7 @@ void Benchmark<T>::saveResult() {
 
     std::fstream file;
     std::stringstream md;
-    std::string fileName = "Benchmarking.md";
+    const std::string fileName = outputPath_ + "Benchmarking.md";
 
     file.open(fileName.c_str(), std::ios::in | std::ios::out | std::ios::app);
 

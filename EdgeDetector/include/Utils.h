@@ -17,7 +17,7 @@
 
 #include "Buffer.h"
 
-const float32_t tolerance_ = 0.016f;
+constexpr float32_t tolerance_{0.016f};
 
 /**
  * @brief This function transposes a vector row-wise to column-wise
@@ -25,7 +25,7 @@ const float32_t tolerance_ = 0.016f;
  * @param in 
  * @return std::shared_ptr<Buffer> 
  */
-std::shared_ptr<Buffer> transpose(const std::shared_ptr<Buffer> in);
+std::shared_ptr<Buffer> transpose(const std::shared_ptr<Buffer>& in);
 
 /**
  * @brief This function transposes a vector row-wise to column-wise. This is the vectorized and parallelized version of transpose function
@@ -33,7 +33,7 @@ std::shared_ptr<Buffer> transpose(const std::shared_ptr<Buffer> in);
  * @param in 
  * @return std::shared_ptr<Buffer> 
  */
-std::shared_ptr<Buffer> transposeOptimized(const std::shared_ptr<Buffer> in);
+std::shared_ptr<Buffer> transposeOptimized(const std::shared_ptr<Buffer>& in);
 
 /**
  * @brief This function stores a Buffer object into a text plain format
@@ -41,7 +41,7 @@ std::shared_ptr<Buffer> transposeOptimized(const std::shared_ptr<Buffer> in);
  * @param in 
  * @param path 
  */
-void printMatrix(const std::shared_ptr<Buffer> in, std::string path);
+void printMatrix(const std::shared_ptr<Buffer>& in, const std::string& path);
 
 /**
  * @brief This function takes 2 Buffer objects and compares element by element if the distance of both values are greater than a threshold
@@ -49,7 +49,7 @@ void printMatrix(const std::shared_ptr<Buffer> in, std::string path);
  * @param in 
  * @param out 
  */
-void verifyOutput(const std::shared_ptr<Buffer> in, const std::shared_ptr<Buffer> out);
+void verifyOutput(const std::shared_ptr<Buffer>& in, const std::shared_ptr<Buffer>& out);
 
 /**
  * @brief This function takes a synthetic matrix and compares the correctness of each value
@@ -57,7 +57,7 @@ void verifyOutput(const std::shared_ptr<Buffer> in, const std::shared_ptr<Buffer
  * @param in 
  * @param zeroCrossingExpected 
  */
-void verifySynteticMatrixOutput(const std::shared_ptr<Buffer> in, float32_t zeroCrossingExpected);
+void verifySynteticMatrixOutput(const std::shared_ptr<Buffer>& in, float32_t zeroCrossingExpected);
 
 /**
  * @brief This function stores a Buffer object into a binary file and returns it into a string.
@@ -65,7 +65,7 @@ void verifySynteticMatrixOutput(const std::shared_ptr<Buffer> in, float32_t zero
  * @param out 
  * @return std::string 
  */
-std::string saveToBin(std::shared_ptr<Buffer> out);
+std::string saveToBin(const std::shared_ptr<Buffer>& out);
 
 /**
  * @brief This function compares 2 strings that contains the binaries of images.

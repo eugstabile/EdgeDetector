@@ -54,7 +54,7 @@ public:
      * @param input 
      * @param dimensions 
      */
-    void setData(std::vector<float32_t>& input, std::vector<int64_t>& dimensions);
+    void setData(const std::vector<float32_t>& input, const std::vector<int64_t>& dimensions);
 
     /**
      * @brief Get the Dims object

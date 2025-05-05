@@ -29,7 +29,7 @@ public:
      * @param out 
      * @param configParams 
      */
-    void settingArguments(std::shared_ptr<BufferTVM> in, std::shared_ptr<BufferTVM> out, const ConfigParams& configParams) override;
+    void settingArguments(const std::shared_ptr<BufferTVM>& in, std::shared_ptr<BufferTVM>& out, const ConfigParams& configParams) override;
     
     /**
      * @brief Computing the sequential version of zero crossing
@@ -37,7 +37,7 @@ public:
      * @param in 
      * @param out 
      */
-    void compute(std::shared_ptr<BufferTVM> in, std::shared_ptr<BufferTVM> out) override;
+    void compute(const std::shared_ptr<BufferTVM>& in, std::shared_ptr<BufferTVM>& out) override;
     
     /**
      * @brief Get the Config Params object
@@ -102,7 +102,7 @@ private:
      * @param out 
      * @param configParams 
      */
-    void checkParams(std::shared_ptr<BufferTVM> in, std::shared_ptr<BufferTVM> out, const ConfigParams& configParams);
+    void checkParams(const std::shared_ptr<BufferTVM>& in, std::shared_ptr<BufferTVM>& out, const ConfigParams& configParams);
     
     
     /**
@@ -112,7 +112,7 @@ private:
      * @param dimsH 
      * @param dimsV 
      */
-    void prepareBuffers(BufferSet& bufferset, std::vector<int64_t>& dimsH, std::vector<int64_t>& dimsV);
+    void prepareBuffers(BufferSet& bufferset, const std::vector<int64_t>& dimsH, const std::vector<int64_t>& dimsV);
 
 };
 

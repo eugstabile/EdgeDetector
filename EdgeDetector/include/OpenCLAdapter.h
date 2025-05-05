@@ -22,6 +22,7 @@
  
  #include "Buffer.h"
  #include "Utils.h"
+ #include "EdgeDetectorException.h"
  
  class OpenCLAdapter {
  
@@ -60,24 +61,27 @@
         openclBuffers.reserve(numOfArguments);
         
         // Read kernel source
-        const std::string fileName = algorithmName + "_OCL_GPU.cl";
-        std::ifstream in{fileName, std::ios::binary};
+        const std::string fileName = "kernels_GPU/" + algorithmName + "_OCL_GPU.cl";
+        std::ifstream fileSource{fileName, std::ios::binary};
 
-        if (!in) {
+        if (!fileSource) {
 
-            throw std::runtime_error("Cannot open " + fileName);
+            THROW_EXCEPTION("Cannot open " + fileName);
             
         }
 
-        const std::string src{std::istreambuf_iterator<char>(in), {}};
+        const std::string src{std::istreambuf_iterator<char>(fileSource), {}};
 
-        // Build program
+        // Crear programa
         cl::Program program{openclParams.context, src, true, &openclParams.ret};
 
         if (openclParams.ret != CL_SUCCESS) {
+
             std::string buildLog;
             program.getBuildInfo(openclParams.devices[0], CL_PROGRAM_BUILD_LOG, &buildLog);
-            std::cerr << "Build log:\n" << buildLog << std::endl;
+            
+            THROW_EXCEPTION_CODE("Error en el build log: ", openclParams.ret );
+
         }
 
         auto makeBuffer = [&](auto&& arg, bool isOutput) {
@@ -92,7 +96,7 @@
                 
                 if (openclParams.ret != CL_SUCCESS) {
 
-                    throw std::runtime_error("enqueueWriteBuffer failed");
+                    THROW_EXCEPTION_CODE("Error al crear el enqueueWriteBuffer: ", openclParams.ret );
 
                 }
                 
@@ -102,7 +106,6 @@
 
         };
 
-        // Unpack arguments: last one is output
         (void) std::initializer_list<int>{(
                 openclBuffers.push_back(
                     makeBuffer(std::forward<Args>(args), (index == numOfArguments - 1))),
@@ -113,7 +116,9 @@
         cl::Kernel kernel(program, kernelName.c_str(), &openclParams.ret);
 
         if (openclParams.ret != CL_SUCCESS) {
-            std::cerr << "Error al crear el kernel: " <<openclParams.ret << std::endl;
+
+            THROW_EXCEPTION_CODE("Error al crear el kernel: ", openclParams.ret );
+
         }
          
         int numThreads = 32;
@@ -123,7 +128,7 @@
             
             if (openclParams.ret != CL_SUCCESS) {
 
-                std::cerr << "Error en setArg para el buffer: " << openclParams.ret << std::endl;
+                THROW_EXCEPTION_CODE("Error en setArg para los buffers: ", openclParams.ret );
 
             }
 
@@ -135,13 +140,19 @@
         size_t lastBufferSize = height * width * sizeof(float32_t);
         
         kernel.setArg(openclBuffers.size(), height);
+
         if (openclParams.ret != CL_SUCCESS) {
-            std::cerr << "Error en setArg para el buffer: " << openclParams.ret << std::endl;
+        
+            THROW_EXCEPTION_CODE("Error en setArg para en el height: ", openclParams.ret );
+        
         }
         
         kernel.setArg(openclBuffers.size() + 1, width);
+        
         if (openclParams.ret != CL_SUCCESS) {
-            std::cerr << "Error en setArg para el buffer: " << openclParams.ret << std::endl;
+        
+            THROW_EXCEPTION_CODE("Error en setArg para en el width: ", openclParams.ret );
+        
         }
         
         if (algorithmName != "upsamplingMatrix" && algorithmName != "transpose") {
@@ -151,6 +162,7 @@
 
             cl::NDRange global(globalHeight, globalWidth);
             cl::NDRange local(numThreads, numThreads);
+        
             openclParams.ret = openclParams.queue.enqueueNDRangeKernel(kernel, cl::NullRange, global, local);
 
         } else {
@@ -162,7 +174,9 @@
 
         // Ejecutar el kernel 
         if (openclParams.ret != CL_SUCCESS) {
-            std::cerr << "Error en enqueueNDRangeKernel: " << openclParams.ret << std::endl;
+        
+            THROW_EXCEPTION_CODE("Error en enqueueNDRangeKernel: ", openclParams.ret );
+        
         }
         
         cl::Buffer& outputGPU = openclBuffers.back();
@@ -170,23 +184,25 @@
         openclParams.ret = openclParams.queue.enqueueReadBuffer(outputGPU, CL_TRUE, 0, lastBufferSize, static_cast<void*>(lastBuffer->getData().data()));
 
         if (openclParams.ret != CL_SUCCESS) {
-            std::cerr << "Error en enqueueReadBuffer: " << openclParams.ret << std::endl;
+
+            THROW_EXCEPTION_CODE("Error en enqueueReadBuffer: ", openclParams.ret );
+        
         }
 
     }
 
     template <typename T>
 
-    static size_t getSize(const T& obj) {
+    static size_t getSize(const T& buffer) {
 
         if constexpr (std::is_same_v<T, std::vector<float>>) {
 
-            return obj.size() * sizeof(float);
+            return buffer.size() * sizeof(float);
 
         } else {
 
-            const size_t height = obj->getDims()[0];
-            const size_t width  = obj->getDims()[1];
+            const size_t height = buffer->getDims()[0];
+            const size_t width  = buffer->getDims()[1];
             
             return height * width * sizeof(float);
 
@@ -195,15 +211,15 @@
     }
  
     template <typename T>
-    static void* getData(T& obj) {
+    static void* getData(T& buffer) {
 
         if constexpr (std::is_same_v<T, std::vector<float>>) {
 
-            return const_cast<float*>(obj.data());
+            return const_cast<float*>(buffer.data());
 
         } else {
 
-            return obj->getData().data();
+            return buffer->getData().data();
 
         }
 

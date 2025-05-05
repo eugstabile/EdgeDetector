@@ -12,8 +12,10 @@
 #define WIDTH Buffer::DimsIndex::WIDTH
 #define VECTOR_STEP 4
 
+constexpr std::string outputPath_ = "output/";
 
-std::shared_ptr<Buffer> transpose(const std::shared_ptr<Buffer> in) {
+
+std::shared_ptr<Buffer> transpose(const std::shared_ptr<Buffer>& in) {
 
     int height = in->getDims()[HEIGHT];
     int width = in->getDims()[WIDTH];
@@ -35,7 +37,7 @@ std::shared_ptr<Buffer> transpose(const std::shared_ptr<Buffer> in) {
 }
 
 
-std::shared_ptr<Buffer> transposeOptimized(const std::shared_ptr<Buffer> in) {
+std::shared_ptr<Buffer> transposeOptimized(const std::shared_ptr<Buffer>& in) {
 
     const int height = in->getDims()[HEIGHT];
     const int width = in->getDims()[WIDTH];
@@ -91,9 +93,9 @@ std::shared_ptr<Buffer> transposeOptimized(const std::shared_ptr<Buffer> in) {
 }
 
 
-void printMatrix(const std::shared_ptr<Buffer> in, std::string path) {
+void printMatrix(const std::shared_ptr<Buffer>& in, const std::string& path) {
     
-    std::ofstream outputfile(path);
+    std::ofstream outputfile(outputPath_ + path);
 
     if (!outputfile) {
         THROW_EXCEPTION("The output file can not be open");
@@ -116,7 +118,7 @@ void printMatrix(const std::shared_ptr<Buffer> in, std::string path) {
 }
 
 
-void verifyOutput(const std::shared_ptr<Buffer> in, const std::shared_ptr<Buffer> out) {
+void verifyOutput(const std::shared_ptr<Buffer>& in, const std::shared_ptr<Buffer>& out) {
 
     int height = in->getDims()[HEIGHT];
     int width = in->getDims()[WIDTH];
@@ -150,7 +152,7 @@ void verifyOutput(const std::shared_ptr<Buffer> in, const std::shared_ptr<Buffer
 }
 
 
-void verifySynteticMatrixOutput(const std::shared_ptr<Buffer> in, float32_t zeroCrossingExpected) {
+void verifySynteticMatrixOutput(const std::shared_ptr<Buffer>& in, float32_t zeroCrossingExpected) {
 
     int height = in->getDims()[HEIGHT];
     int width = in->getDims()[WIDTH];
@@ -172,9 +174,9 @@ void verifySynteticMatrixOutput(const std::shared_ptr<Buffer> in, float32_t zero
 }
 
 
-std::string saveToBin(std::shared_ptr<Buffer> out) {
+std::string saveToBin(const std::shared_ptr<Buffer>& out) {
     
-    std::string pathOut = "matrixOut.bin";
+    std::string pathOut = outputPath_ + "matrixOut.bin";
     std::vector<float32_t>& output = out->getData();
 
     std::ofstream writeFile;

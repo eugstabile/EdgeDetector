@@ -30,7 +30,7 @@ public:
      * @param out 
      * @param configParams 
      */
-    void settingArguments(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out, const ConfigParams& configParams);
+    void settingArguments(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const ConfigParams& configParams);
     
     /**
      * @brief Computing the sequential version of zero crossing
@@ -38,7 +38,7 @@ public:
      * @param in 
      * @param out 
      */
-    void compute(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out) override;
+    void compute(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out) override;
     
     /**
      * @brief Get the Config Params object
@@ -103,7 +103,7 @@ private:
      * @param out 
      * @param configParams 
      */
-    void checkParams(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out, const ConfigParams& configParams);
+    void checkParams(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const ConfigParams& configParams);
     
     /**
      * @brief This function reserves memory space in the intermediate vectors necessary for the computation of the algorithm according to the dimensions of the input data.
@@ -112,7 +112,7 @@ private:
      * @param dimsH 
      * @param dimsV 
      */
-    void prepareBuffers(BufferSet& bufferset, std::vector<int64_t>& dimsH, std::vector<int64_t>& dimsV);
+    void prepareBuffers(BufferSet& bufferset, const std::vector<int64_t>& dimsH, const std::vector<int64_t>& dimsV);
 
 };
 

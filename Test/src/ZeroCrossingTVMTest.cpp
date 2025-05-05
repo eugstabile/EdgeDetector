@@ -266,8 +266,8 @@ TEST_P(ZeroCrossingTVMTest, zeroCrossingTVM_compute_sameOutputAsCPU) {
         std::shared_ptr<Buffer> zeroCrossingCPUH = zeroCrossingCPU->getZeroCrossingH();
         std::shared_ptr<Buffer> zeroCrossingCPUV = zeroCrossingCPU->getZeroCrossingV();
 
-        printMatrix(zeroCrossingCPUH, "CPUHorizontal");
-        printMatrix(zcTVMH, "TVMHorizontal");
+        //printMatrix(zeroCrossingCPUH, "CPUHorizontal");
+        //printMatrix(zcTVMH, "TVMHorizontal");
 
         verifyOutput(zeroCrossingCPUH, zcTVMH);
         verifyOutput(zeroCrossingCPUV, zcTVMV);

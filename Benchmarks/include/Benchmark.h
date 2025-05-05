@@ -20,11 +20,13 @@
     using BENCH_TYPE = float32_t;
 
     struct MathResult {
+
         BENCH_TYPE resultMean;
         BENCH_TYPE resultMedian;
         float resultErrorMargin;
         float resultStd;
         unsigned int numImages;
+
     };
 
     template <typename T = std::string> 
@@ -57,6 +59,7 @@
         std::string funcline_;
         std::string comment_;
         AlgorithmFactory::AlgorithmType procTypeId_;
+        const std::string outputPath_ = "output/";	
 
         MathResult valueMap_;
         std::tuple<size_t, size_t, size_t> matrixSize_;

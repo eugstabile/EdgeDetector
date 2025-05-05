@@ -7,7 +7,7 @@
 #define HEIGHT Buffer::DimsIndex::HEIGHT
 #define WIDTH Buffer::DimsIndex::WIDTH
 
-std::string pathDir =  "/home/eusta/TVMEugenio/EdgeDetector/Resources/";
+const std::string pathDir =  "/home/eusta/TVMEugenio/EdgeDetector/Resources/kernels_CPU_OPT/";
 
 
 TVMAdapter::TVMAdapter(const std::vector<std::string>& algorithms) {
@@ -143,7 +143,7 @@ void TVMAdapter::loadLibraries(const std::string& algorithmName) {
     std::string libraryName;
 
     #ifdef _WIN32
-        libraryName = algorithmName + "Windows_CPU_OPT" + ".dll";
+        libraryName = "kernels_CPU_OPT/" + algorithmName + "Windows_CPU_OPT" + ".dll";
     #else
         libraryName = pathDir + algorithmName + "Linux_CPU_OPT" + ".so";
     #endif

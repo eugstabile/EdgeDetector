@@ -28,7 +28,7 @@ const std::vector<int64_t>& Buffer::getDims() noexcept {
 }
 
 
-void Buffer::setData(std::vector<float32_t>& input, std::vector<int64_t>& dimensions) {
+void Buffer::setData(const std::vector<float32_t>& input, const std::vector<int64_t>& dimensions) {
 
     if (input.size() == 0) {
         THROW_EXCEPTION( "Input size on Buffer setData is null." );

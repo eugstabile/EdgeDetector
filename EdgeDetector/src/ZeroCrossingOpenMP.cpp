@@ -18,7 +18,7 @@ ZeroCrossingOpenMP::ZeroCrossingOpenMP() {
 }
 
 
-void ZeroCrossingOpenMP::compute(const std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out) {
+void ZeroCrossingOpenMP::compute(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out) {
 
     // Horizontal edge computation
     calculateEdges(in, derivativeImage_.h, zeroCrossings_.h);
@@ -33,7 +33,7 @@ void ZeroCrossingOpenMP::compute(const std::shared_ptr<Buffer> in, std::shared_p
 }
 
 
-void ZeroCrossingOpenMP::filterUpsampling(int kernelPos, std::vector<float32_t>::iterator& inputData, std::vector<float32_t>::iterator& outputData) {
+void ZeroCrossingOpenMP::filterUpsampling(int kernelPos, const std::vector<float32_t>::iterator& inputData, std::vector<float32_t>::iterator& outputData) {
   
     const int marginsInput = static_cast<int>(upsamplingFactor_ / 2);
     const int kernelSize = static_cast<int>(upsamplingFilter_.size());
@@ -123,7 +123,7 @@ void ZeroCrossingOpenMP::filterUpsampling(int kernelPos, std::vector<float32_t>:
 }
 
 
-void ZeroCrossingOpenMP::calculateEdges(const std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> derivativeImage, std::shared_ptr<Buffer> zeroCrossingsMap){
+void ZeroCrossingOpenMP::calculateEdges(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& derivativeImage, const std::shared_ptr<Buffer>& zeroCrossingsMap){
     
     /** 
      *    
@@ -294,7 +294,7 @@ void ZeroCrossingOpenMP::calculateEdges(const std::shared_ptr<Buffer> in, std::s
 }
 
 
-void ZeroCrossingOpenMP::combineEdges(const std::shared_ptr<Buffer> zeroCrossingsMapH, const std::shared_ptr<Buffer> zeroCrossingsMapV, std::shared_ptr<Buffer> out) {
+void ZeroCrossingOpenMP::combineEdges(const std::shared_ptr<Buffer>& zeroCrossingsMapH, const std::shared_ptr<Buffer>& zeroCrossingsMapV, std::shared_ptr<Buffer>& out) {
 
     
     const std::vector<float32_t>& zeroCrossingsMapHData = zeroCrossingsMapH->getData();
@@ -354,7 +354,7 @@ void ZeroCrossingOpenMP::combineEdges(const std::shared_ptr<Buffer> zeroCrossing
 }
 
 
-void ZeroCrossingOpenMP::settingArguments(const std::shared_ptr<Buffer> in, const std::shared_ptr<Buffer> out, const ConfigParams& configParams) {
+void ZeroCrossingOpenMP::settingArguments(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const ConfigParams& configParams) {
 
     checkParams(in, out, configParams);
     setConfigParams(configParams);
@@ -370,7 +370,7 @@ void ZeroCrossingOpenMP::settingArguments(const std::shared_ptr<Buffer> in, cons
 }
 
 
-void ZeroCrossingOpenMP::checkParams(const std::shared_ptr<Buffer> in, const std::shared_ptr<Buffer> out, const ConfigParams &configParams) {
+void ZeroCrossingOpenMP::checkParams(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const ConfigParams &configParams) {
 
     const std::vector<int64_t> inputDims = in->getDims();
     const std::vector<int64_t> outputDims = in->getDims();

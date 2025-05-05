@@ -103,7 +103,7 @@ TEST_P(ZeroCrossingCPUBenchmark, benchmark_zeroCrossing_syntheticImage) {
 
         benchmarkSynthetic->compute(lambdaContext, lambda);
 
-    }catch(EdgeDetectorException& e){
+    } catch(EdgeDetectorException& e) {
 
         GTEST_LOG_(ERROR) << e.what() << std::endl;
         FAIL();
@@ -147,7 +147,7 @@ TEST_P(ZeroCrossingOpenMPBenchmark, benchmark_zeroCrossing_realImage) {
 
         benchmark->compute(lambdaContext, lambda);
 
-    }catch(EdgeDetectorException& e){
+    } catch(EdgeDetectorException& e) {
 
         GTEST_LOG_(ERROR) << e.what() << std::endl;
         FAIL();
@@ -189,7 +189,7 @@ TEST_P(ZeroCrossingOpenMPBenchmark, benchmark_zeroCrossing_syntheticImage) {
 
         benchmarkSynthetic->compute(lambdaContext, lambda);
 
-    }catch(EdgeDetectorException& e){
+    } catch(EdgeDetectorException& e) {
 
         GTEST_LOG_(ERROR) << e.what() << std::endl;
         FAIL();
@@ -236,7 +236,7 @@ TEST_P(ZeroCrossingTVMBenchmark, benchmark_zeroCrossing_realImage) {
 
         benchmark->compute(lambdaContext, lambda);
 
-    }catch(EdgeDetectorException& e){
+    } catch(EdgeDetectorException& e) {
 
         GTEST_LOG_(ERROR) << e.what() << std::endl;
         FAIL();
@@ -288,7 +288,7 @@ TEST_P(ZeroCrossingTVMBenchmark , benchmark_zeroCrossing_syntheticImage) {
 
         benchmarkSynthetic->compute(lambdaContext, lambda);
 
-    }catch(EdgeDetectorException& e){
+    } catch(EdgeDetectorException& e) {
 
         GTEST_LOG_(ERROR) << e.what() << std::endl;
         FAIL();
@@ -331,7 +331,7 @@ TEST_P(ZeroCrossingOpenCLBenchmark, benchmark_zeroCrossing_realImage) {
 
         benchmark->compute(lambdaContext, lambda);
 
-    }catch(EdgeDetectorException& e){
+    } catch(EdgeDetectorException& e) {
 
         GTEST_LOG_(ERROR) << e.what() << std::endl;
         FAIL();
@@ -373,7 +373,7 @@ TEST_P(ZeroCrossingOpenCLBenchmark, benchmark_zeroCrossing_syntheticImage) {
 
         benchmarkSynthetic->compute(lambdaContext, lambda);
 
-    }catch(EdgeDetectorException& e){
+    } catch(EdgeDetectorException& e) {
 
         GTEST_LOG_(ERROR) << e.what() << std::endl;
         FAIL();

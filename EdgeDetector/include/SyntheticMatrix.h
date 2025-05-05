@@ -52,8 +52,8 @@ private:
     std::vector<std::shared_ptr<Buffer>> input_;
     std::shared_ptr<Buffer> inputBuffer_;
     
-    void generateMultipleSyntheticMatrix(std::vector<std::shared_ptr<Buffer>>& input, SyntheticDims& syntheticDims);
-    void generateSyntheticMatrix(std::shared_ptr<Buffer> in, const float32_t slope, const float32_t zc_init);
+    void generateMultipleSyntheticMatrix(std::vector<std::shared_ptr<Buffer>>& input, const SyntheticDims& syntheticDims);
+    void generateSyntheticMatrix(const std::shared_ptr<Buffer>& in, const float32_t slope, const float32_t zc_init);
 
 
 };

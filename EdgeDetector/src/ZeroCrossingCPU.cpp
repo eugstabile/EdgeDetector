@@ -18,7 +18,7 @@ ZeroCrossingCPU::ZeroCrossingCPU() {
 }
 
 
-void ZeroCrossingCPU::compute(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out) {
+void ZeroCrossingCPU::compute(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out) {
 
     // Horizontal edge computation
     filterDerivative(in, derivativeImage_.h, derivativeFilter_);
@@ -40,7 +40,7 @@ void ZeroCrossingCPU::compute(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer
 }
 
 
-void ZeroCrossingCPU::filterUpsampling(const std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out, const std::vector<float32_t>& kernel) {
+void ZeroCrossingCPU::filterUpsampling(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const std::vector<float32_t>& kernel) {
   
     std::vector<float32_t>& inputData = in->getData();
     std::vector<float32_t>& outputData = out->getData();
@@ -81,7 +81,7 @@ void ZeroCrossingCPU::filterUpsampling(const std::shared_ptr<Buffer> in, std::sh
 }
 
 
-void ZeroCrossingCPU::filterDerivative(const std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out, const std::vector<float32_t>& kernel) {
+void ZeroCrossingCPU::filterDerivative(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const std::vector<float32_t>& kernel) {
   
     std::vector<float32_t>& inputData = in->getData();
     std::vector<float32_t>& outputData = out->getData();
@@ -106,7 +106,7 @@ void ZeroCrossingCPU::filterDerivative(const std::shared_ptr<Buffer> in, std::sh
 }
 
 
-void ZeroCrossingCPU::calculateConfidences(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> confidencesFilter) {
+void ZeroCrossingCPU::calculateConfidences(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& confidencesFilter) {
   
     std::vector<float32_t>& inputData = in->getData();
     std::vector<float32_t>& confidencesData = confidencesFilter->getData();
@@ -126,7 +126,7 @@ void ZeroCrossingCPU::calculateConfidences(std::shared_ptr<Buffer> in, std::shar
 }
 
 
-void ZeroCrossingCPU::calculateUpsampling(const std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> upsampledImage, std::shared_ptr<Buffer> inPadded) {
+void ZeroCrossingCPU::calculateUpsampling(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& upsampledImage, std::shared_ptr<Buffer>& inPadded) {
 
     std::vector<float32_t>& inputData = in->getData();
     int height = in->getDims()[HEIGHT];
@@ -146,7 +146,7 @@ void ZeroCrossingCPU::calculateUpsampling(const std::shared_ptr<Buffer> in, std:
 }
 
 
-void ZeroCrossingCPU::calculateEdges(const std::shared_ptr<Buffer> inUpsampled, std::shared_ptr<Buffer> confidences, std::shared_ptr<Buffer> zeroCrossingsMap) {
+void ZeroCrossingCPU::calculateEdges(const std::shared_ptr<Buffer>& inUpsampled, const std::shared_ptr<Buffer>& confidences, std::shared_ptr<Buffer>& zeroCrossingsMap) {
  
     std::vector<float32_t>& inputUpsampledData = inUpsampled->getData();
     std::vector<float32_t>& confidencesData = confidences->getData();
@@ -206,7 +206,7 @@ void ZeroCrossingCPU::calculateEdges(const std::shared_ptr<Buffer> inUpsampled, 
 }
 
 
-void ZeroCrossingCPU::combineEdges(std::shared_ptr<Buffer> zeroCrossingsMapH, std::shared_ptr<Buffer> zeroCrossingsMapV, std::shared_ptr<Buffer> out) {
+void ZeroCrossingCPU::combineEdges(const std::shared_ptr<Buffer>& zeroCrossingsMapH, const std::shared_ptr<Buffer>& zeroCrossingsMapV, std::shared_ptr<Buffer>& out) {
 
     
     std::vector<float32_t>& zeroCrossingsMapHData = zeroCrossingsMapH->getData();
@@ -235,7 +235,7 @@ void ZeroCrossingCPU::combineEdges(std::shared_ptr<Buffer> zeroCrossingsMapH, st
 }
 
 
-void ZeroCrossingCPU::settingArguments(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out, const ConfigParams& configParams) {
+void ZeroCrossingCPU::settingArguments(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const ConfigParams& configParams) {
 
     checkParams(in, out, configParams);
     setConfigParams(configParams);
@@ -257,7 +257,7 @@ void ZeroCrossingCPU::settingArguments(std::shared_ptr<Buffer> in, std::shared_p
 }
 
 
-void ZeroCrossingCPU::checkParams(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out, const ConfigParams& configParams) {
+void ZeroCrossingCPU::checkParams(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const ConfigParams& configParams) {
 
     std::vector<int64_t> inputDims = in->getDims();
     std::vector<int64_t> outputDims = in->getDims();
@@ -306,7 +306,7 @@ void ZeroCrossingCPU::setConfigParams(const ConfigParams& configParams) {
 }
 
 
-void ZeroCrossingCPU::prepareBuffers(BufferSet& bufferset, std::vector<int64_t>& dimsH, std::vector<int64_t>& dimsV) {
+void ZeroCrossingCPU::prepareBuffers(BufferSet& bufferset, const std::vector<int64_t>& dimsH, const std::vector<int64_t>& dimsV) {
   
     bufferset.h = std::make_shared<Buffer>(dimsH[HEIGHT], dimsH[WIDTH]);
     bufferset.v = std::make_shared<Buffer>(dimsV[HEIGHT], dimsV[WIDTH]);

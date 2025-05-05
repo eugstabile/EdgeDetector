@@ -26,7 +26,7 @@ public:
         float32_t threshold = 0.015f;
     };
     
-    virtual void settingArguments(std::shared_ptr<T> in, std::shared_ptr<T> out, const ConfigParams& configParams) = 0;
+    virtual void settingArguments(const std::shared_ptr<T>& in, std::shared_ptr<T>& out, const ConfigParams& configParams) = 0;
     virtual const ConfigParams getConfigParams() = 0;
     virtual void setConfigParams(const ConfigParams& configParams) = 0;
       

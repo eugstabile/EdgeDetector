@@ -58,7 +58,7 @@ SyntheticMatrix::SyntheticMatrix(int64_t minHeight, int64_t minWidth, int64_t ma
 }
 
 
-void SyntheticMatrix::generateSyntheticMatrix(std::shared_ptr<Buffer> in, const float32_t slope, const float32_t zc_init) {
+void SyntheticMatrix::generateSyntheticMatrix(const std::shared_ptr<Buffer>& in, const float32_t slope, const float32_t zc_init) {
 
     std::vector<float32_t>& inData = in->getData();
     int height = in->getDims()[HEIGHT];
@@ -79,7 +79,7 @@ void SyntheticMatrix::generateSyntheticMatrix(std::shared_ptr<Buffer> in, const 
 }
 
 
-void SyntheticMatrix::generateMultipleSyntheticMatrix(std::vector<std::shared_ptr<Buffer>>& input, SyntheticDims& syntheticDims) {
+void SyntheticMatrix::generateMultipleSyntheticMatrix(std::vector<std::shared_ptr<Buffer>>& input, const SyntheticDims& syntheticDims) {
 
     int64_t height = syntheticDims.height[DimsSize::MIN];
     int64_t width = syntheticDims.width[DimsSize::MIN];

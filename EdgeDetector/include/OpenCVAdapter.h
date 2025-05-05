@@ -81,7 +81,7 @@ public:
      * @param in 
      * @param path 
      */
-    void printMatrixOpenCV(const cv::Mat& in, std::string path);
+    void printMatrixOpenCV(const cv::Mat& in, const std::string& path);
     
     /**
      * @brief Get the Bit Depth object
@@ -99,6 +99,7 @@ public:
     
 private:
 
+    const std::string imageFolder_ = "images/";
     const std::string pathFormat_ = ".png";
     std::vector<float32_t> image_;
     int bitDepth_ = 8;

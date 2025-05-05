@@ -28,7 +28,7 @@ public:
      * @param in 
      * @param out 
      */
-    virtual void compute(std::shared_ptr<T> in, std::shared_ptr<T> out) = 0;
+    virtual void compute(const std::shared_ptr<T>& in, std::shared_ptr<T>& out) = 0;
 
 };
 

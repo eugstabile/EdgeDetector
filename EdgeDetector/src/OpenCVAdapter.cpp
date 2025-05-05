@@ -10,7 +10,7 @@
 
 std::shared_ptr<Buffer> OpenCVAdapter::obtainImage(const std::string path) {
 
-    cv::Mat input = cv::imread(path + pathFormat_, cv::IMREAD_UNCHANGED);
+    cv::Mat input = cv::imread(imageFolder_ + path + pathFormat_, cv::IMREAD_UNCHANGED);
 
     if (input.empty()) {
         THROW_EXCEPTION( "Invalid image path!" );
@@ -40,7 +40,7 @@ void OpenCVAdapter::saveImage(std::shared_ptr<Buffer> inputImage, std::string im
     int width = static_cast<int64_t>(dimsImage[WIDTH]);
     cv::Mat image(height, width, CV_32F, inputCopy->getData().data());
 
-    std::string outputPath = imageName + pathFormat_;
+    const std::string outputPath = imageFolder_ + imageName + pathFormat_;
     
     cv::normalize(image, image, 0, 255, cv::NORM_MINMAX);
     image.convertTo(image, CV_8U);
@@ -114,7 +114,7 @@ std::shared_ptr<Buffer> OpenCVAdapter::convertRgb2Gray(const cv::Mat& imageRgb) 
 }
 
 
-void OpenCVAdapter::printMatrixOpenCV(const cv::Mat& in, std::string path) {
+void OpenCVAdapter::printMatrixOpenCV(const cv::Mat& in, const std::string& path) {
 
 	std::vector<int64_t> dimsImage = {static_cast<int64_t>(in.rows), static_cast<int64_t>(in.cols)};
     std::vector<float32_t> array((float32_t *)in.data, (float32_t *)in.data + in.rows * in.cols);

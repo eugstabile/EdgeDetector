@@ -37,7 +37,7 @@ public:
      * @param out 
      * @param configParams 
      */
-    void settingArguments(const std::shared_ptr<Buffer> in, const std::shared_ptr<Buffer> out, const ConfigParams& configParams);
+    void settingArguments(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const ConfigParams& configParams);
     
     /**
      * @brief Computing the optimized version of zero crossing
@@ -45,7 +45,7 @@ public:
      * @param in 
      * @param out 
      */
-    void compute(const std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out) override;
+    void compute(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out) override;
     
     /**
      * @brief Get the Config Params object
@@ -101,7 +101,7 @@ private:
      * @param out 
      * @param configParams 
      */
-    void checkParams(const std::shared_ptr<Buffer> in, const std::shared_ptr<Buffer> out, const ConfigParams& configParams);
+    void checkParams(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const ConfigParams& configParams);
     
     /**
      * @brief This function calculates borders of the input image. Applying zero crossing algorithm two times, first by rows and secondly by columns.
@@ -110,7 +110,7 @@ private:
      * @param derivativeImage 
      * @param zeroCrossingsMap 
      */
-    void calculateEdges(const std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> derivativeImage, std::shared_ptr<Buffer> zeroCrossingsMap);
+    void calculateEdges(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& derivativeImage, const std::shared_ptr<Buffer>& zeroCrossingsMap);
     
     /**
      * @brief This function verifies a zero crossing in horizontal and vertical component. In case of zero crossing stores 1, otherwise 0.
@@ -119,7 +119,7 @@ private:
      * @param zeroCrossingsMapV 
      * @param out 
      */
-    void combineEdges(const std::shared_ptr<Buffer> zeroCrossingsMapH, const std::shared_ptr<Buffer> zeroCrossingsMapV, std::shared_ptr<Buffer> out);
+    void combineEdges(const std::shared_ptr<Buffer>& zeroCrossingsMapH, const std::shared_ptr<Buffer>& zeroCrossingsMapV, std::shared_ptr<Buffer>& out);
     
     /**
      * @brief This function applies the upsampling filter to the input vector.
@@ -128,7 +128,7 @@ private:
      * @param inputData 
      * @param outputData 
      */
-    void filterUpsampling(int kernelPos, std::vector<float32_t>::iterator& inputData, std::vector<float32_t>::iterator& outputData);
+    void filterUpsampling(int kernelPos, const std::vector<float32_t>::iterator& inputData, std::vector<float32_t>::iterator& outputData);
     
     /**
      * @brief This function reserves memory space in the intermediate vectors necessary for the computation of the algorithm according to the dimensions of the input data.

@@ -22,7 +22,7 @@ ZeroCrossingOpenCL::ZeroCrossingOpenCL() {
 }
 
 
-void ZeroCrossingOpenCL::compute(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out) {    
+void ZeroCrossingOpenCL::compute(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out) {    
 
     // Horizontal edge computation
     openCLAdapter_->computeOpenCL("filterDerivative", openclParams_, in, derivativeFilter_, derivativeImage_.h);
@@ -47,7 +47,7 @@ void ZeroCrossingOpenCL::compute(std::shared_ptr<Buffer> in, std::shared_ptr<Buf
 }
 
 
-void ZeroCrossingOpenCL::settingArguments(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out, const ConfigParams& configParams) {
+void ZeroCrossingOpenCL::settingArguments(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const ConfigParams& configParams) {
 
     checkParams(in, out, configParams);
     setConfigParams(configParams);
@@ -71,7 +71,7 @@ void ZeroCrossingOpenCL::settingArguments(std::shared_ptr<Buffer> in, std::share
 }
 
 
-void ZeroCrossingOpenCL::checkParams(std::shared_ptr<Buffer> in, std::shared_ptr<Buffer> out, const ConfigParams& configParams) {
+void ZeroCrossingOpenCL::checkParams(const std::shared_ptr<Buffer>& in, std::shared_ptr<Buffer>& out, const ConfigParams& configParams) {
 
 
     std::vector<int64_t> inputDims = in->getDims();
@@ -122,7 +122,7 @@ void ZeroCrossingOpenCL::setConfigParams(const ConfigParams& configParams) {
 }
 
 
-void ZeroCrossingOpenCL::prepareBuffers(BufferSet& bufferset, std::vector<int64_t>& dimsH, std::vector<int64_t>& dimsV) {
+void ZeroCrossingOpenCL::prepareBuffers(BufferSet& bufferset, const std::vector<int64_t>& dimsH, const std::vector<int64_t>& dimsV) {
   
     bufferset.h = std::make_shared<Buffer>(dimsH[HEIGHT], dimsH[WIDTH]);
     bufferset.v = std::make_shared<Buffer>(dimsV[HEIGHT], dimsV[WIDTH]);
