@@ -1,11 +1,10 @@
 /**
  * @file ZeroCrossingTest.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile 
  * @brief A Fixture Google Test for ZeroCrossingTest.
  * @version 2.0.0
  * @date 2024-04-30
  * 
- * @copyright Copyright (c) 2024, Photonicsens. All rights reserved.
  * 
  */
 
@@ -29,25 +28,26 @@ class ZeroCrossingTest : public ::testing::TestWithParam<std::tuple<AlgorithmFac
 
 public:
 
+    using INVALID_TYPE = std::vector<double>;
+    using ConfigParams = IZeroCrossing<B>::ConfigParams;
+
+protected:
+
     AlgorithmFactory::AlgorithmType algorithmType = std::get<0>(GetParam());
     std::string processorType = std::get<1>(GetParam());
 
-protected:
-    
     const std::string path_ = "parrot";
-    std::string savingPath_ = path_ + "ZeroCrossing" + processorType;
-    std::string syntheticPath_ = "matrixSynt"+ processorType + "Input";
-    std::string syntheticSavingPath_ = "matrixSynt" + processorType + "Output";
-    std::string syntheticTPath_ = "matrixTrin"+ processorType + "Input";
-    std::string syntheticTSavingPath_ = "matrixTrin" + processorType + "Output";
-    std::string compareBinImage_ = "matrixSynt" + processorType + "InputCompare";
+    const std::string savingPath_ = path_ + "ZeroCrossing" + processorType;
+    const std::string syntheticPath_ = "matrixSynt"+ processorType + "Input";
+    const std::string syntheticSavingPath_ = "matrixSynt" + processorType + "Output";
+    const std::string syntheticTPath_ = "matrixTrin"+ processorType + "Input";
+    const std::string syntheticTSavingPath_ = "matrixTrin" + processorType + "Output";
+    const std::string compareBinImage_ = "matrixSynt" + processorType + "InputCompare";
     const std::string matrixCVOut_ = "matrixCVOut.bin";
 
-    using INVALID_TYPE = std::vector<double>;
     
     int64_t height;
     int64_t width;
-    typename IZeroCrossing<B>::ConfigParams configParams;
     std::vector<int64_t> inputDims;
 
     std::shared_ptr<OpenCVAdapter> adapter;
@@ -56,6 +56,7 @@ protected:
     std::shared_ptr<SyntheticMatrix> syntheticMatrix;
     float32_t slope;
     float32_t zeroCrossingExpected;
+    ConfigParams configParams;
 
 
     void SetUp() override {

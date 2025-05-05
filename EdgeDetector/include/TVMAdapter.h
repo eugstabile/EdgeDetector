@@ -1,11 +1,9 @@
 /**
  * @file TVMAdapter.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile
  * @brief Adapter to TVM library
  * @version 2.0.0
  * @date 2024-06-17
- * 
- * Copyright (c) 2024, Photonicsens. All rights reserved.
  * 
  */
 

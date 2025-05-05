@@ -1,10 +1,9 @@
 /**
  * @file BufferTVM.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile
  * @brief Interface for the basic data transfer object
  * @version 2.0.0
  * @date 2024-07-08
- * 
  * 
  */
 

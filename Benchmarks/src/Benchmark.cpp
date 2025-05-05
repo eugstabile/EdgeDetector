@@ -146,7 +146,7 @@ void Benchmark<T>::compute(std::function<void(T)>& lambdaContext, std::function<
         lambda();
         lambda();
         
-        for (int i = 0; i < iterations_; ++i) {
+        for (size_t i = 0; i < iterations_; ++i) {
 
             BENCH_TYPE&& res = benchmarkLambda(lambda);
             sum += res;
@@ -172,7 +172,7 @@ void Benchmark<T>::calculateTime(BENCH_TYPE sum, std::vector<uint64_t>& results)
     float32_t stdDev = 0.0f;
     BENCH_TYPE variance = 0.0;
 
-    for (const auto &result :results) {
+    for (const auto &result : results) {
 
         variance += pow(result - mean, 2);
 
@@ -284,7 +284,7 @@ void Benchmark<T>::saveResult() {
         stringChannels = (channels == 1) ? "" : " x " + std::to_string(channels);
         configuration = procType + comment_;
 
-        file                << " | " 
+        file                << "| " 
         << funcline_        << " | " 
         << configuration    << " | "
         << "Images processed: " 

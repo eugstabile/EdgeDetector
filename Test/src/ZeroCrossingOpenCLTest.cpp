@@ -237,9 +237,6 @@ TEST_P(ZeroCrossingOpenCLTest, zeroCrossingOpenCL_compute_sameOutputAsCPU) {
         std::shared_ptr<Buffer> zeroCrossingCPUH = zeroCrossingCPU->getZeroCrossingH();
         std::shared_ptr<Buffer> zeroCrossingCPUV = zeroCrossingCPU->getZeroCrossingV();
 
-        // printMatrix(zeroCrossingCPUH, "CPUHorizontal");
-        // printMatrix(zeroCrossingOpenCLH, "OpenCLHorizontal");
-
         verifyOutput(zeroCrossingCPUH, zeroCrossingOpenCLH);
         verifyOutput(zeroCrossingCPUV, zeroCrossingOpenCLV);
         verifyOutput(outBufferCpu, outBufferOpenCL);

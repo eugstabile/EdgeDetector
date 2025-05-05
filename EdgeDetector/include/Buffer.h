@@ -1,6 +1,6 @@
 /**
  * @file Buffer.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile
  * @brief Interface for the basic data transfer object
  * @version 2.0.0
  * @date 2024-03-18
@@ -13,7 +13,7 @@
 #ifndef _BUFFER_H
 #define _BUFFER_H
 
-#include<stdint.h>
+#include <stdint.h>
 
 #include "IBuffer.h"
 

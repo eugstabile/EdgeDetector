@@ -1,7 +1,7 @@
 /**
  * @class IZeroCrossing
  * @file IZeroCrossing.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile
  * @brief Interface to define zero crossing algorithms on differents processors
  * @version 2.0.0
  * @date 2024-03-22

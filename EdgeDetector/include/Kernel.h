@@ -1,6 +1,6 @@
 /**
  * @file Kernel.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile
  * @brief Generate kernels filter 
  * @version 2.0.0
  * @date 2024-04-24
@@ -18,7 +18,7 @@ class Kernel {
 
 public:
 
-	Kernel()= default;
+	Kernel() = default;
 	~Kernel() = default;
 	
 	const std::vector<float32_t>& getDerivativeFilter();

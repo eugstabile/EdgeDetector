@@ -1,10 +1,9 @@
 /**
  * @file EdgeDetectorException.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile 
  * @brief Generic exception for EdgeDetector error handling
  * @version 2.0.0
  * @date 2024-04-05
- * 
  * 
  */
 
@@ -28,18 +27,21 @@ public:
 	 * 
 	 * @param msg 
 	 */
-	EdgeDetectorException(const char* msg); 
+	explicit EdgeDetectorException(const std::string& msg) : message(msg) {}
+	explicit EdgeDetectorException(const char* msg) : message(msg) {}
 
 	/**
 	 * @brief Return the message of the Exception 
 	 * 
 	 * @return const char* 
 	 */
-	const char* what() noexcept;
+	const char* what() const noexcept override {
+		return message.c_str();
+	}
 
-private: 
+private:
 
-	std::string message_; 
+	std::string message;
 
 }; 
 

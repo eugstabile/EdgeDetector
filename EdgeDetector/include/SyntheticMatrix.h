@@ -1,10 +1,9 @@
 /**
  * @file SyntheticMatrix.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile 
  * @brief Generate synthetic image with an edge.
  * @version 2.0.0
  * @date 2024-04-24
- * 
  * 
  */
 
@@ -21,6 +20,7 @@
 class SyntheticMatrix {
 
 public:
+
     SyntheticMatrix(int64_t minHeight = 1000, int64_t minWidth = 1000, float32_t slope = 1.f, float32_t zc_init = 0.f);
 	SyntheticMatrix(int64_t numOfImages, int64_t minHeight, int64_t minWidth, int64_t growthFactor, float32_t slope = 1.f, float32_t zc_init = 0.f);
 	SyntheticMatrix(int64_t minHeight, int64_t minWidth, int64_t maxHeight, int64_t maxWidth, int64_t growthFactor, float32_t slope = 1.f, float32_t zc_init = 0.f);
@@ -38,12 +38,14 @@ private:
     };
 
     struct SyntheticDims {
+
         int64_t numOfImages;
 		std::vector<int64_t> height;
 		std::vector<int64_t> width;
         int64_t growthFactor;
         float32_t slope;
         float32_t zc_init;
+
 	};
 
     SyntheticDims syntheticDims_;

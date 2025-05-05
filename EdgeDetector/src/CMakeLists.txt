@@ -2,7 +2,6 @@ add_library(${LIBRARY_NAME} STATIC
     "AlgorithmFactory.cpp"
     "Buffer.cpp"
     "BufferTVM.cpp"
-    "EdgeDetectorException.cpp"
     "Kernel.cpp"
     "OpenCLAdapter.cpp"
     "OpenCVAdapter.cpp"

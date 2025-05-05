@@ -1,6 +1,6 @@
 /**
  * @file OpenCVAdapter.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile
  * @brief Adapter to OpenCV library to manage the input/output image
  * @version 2.0.0
  * @date 2024-03-18
@@ -98,7 +98,8 @@ public:
     void setBitDepth(int bitDepth);
     
 private:
-    std::string pathFormat_ = ".png";
+
+    const std::string pathFormat_ = ".png";
     std::vector<float32_t> image_;
     int bitDepth_ = 8;
 

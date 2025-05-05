@@ -1,7 +1,7 @@
 /**
  * @class IAlgorithm
  * @file IAlgorithm.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile 
  * @brief Interface to define the common methods for all algorithms
  * @version 2.0.0
  * @date 2024-03-22

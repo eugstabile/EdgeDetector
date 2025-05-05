@@ -2,6 +2,7 @@
 #include "ZeroCrossingTest.h"
 #include "ZeroCrossingOpenMP.h"
 
+constexpr float INVALID_THRESHOLD = -1.0f;
 constexpr Buffer::DimsIndex WIDTH = Buffer::DimsIndex::WIDTH;
 constexpr Buffer::DimsIndex HEIGHT = Buffer::DimsIndex::HEIGHT;
 constexpr AlgorithmFactory::AlgorithmType ZERO_CROSSING_CPU = AlgorithmFactory::AlgorithmType::ZERO_CROSSING_CPU;
@@ -124,7 +125,6 @@ TEST_P(ZeroCrossingOpenMPTest, compute_invalidCheckParams_exceptionExpected) {
     std::shared_ptr<VALID_TYPE> outBuffer = std::make_shared<VALID_TYPE>(height, width);
     bool throwException = false;
 
-    const float INVALID_THRESHOLD = -1.0f;
     configParams.threshold = INVALID_THRESHOLD;
 
     try {

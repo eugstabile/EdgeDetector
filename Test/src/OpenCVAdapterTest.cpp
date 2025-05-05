@@ -74,7 +74,7 @@ TEST_F(OpenCVAdapterTest, OpenCVAdapter_obtainImage_invalidPath) {
 
     try {
         
-        std::string imageWithInvalidPath = "invalid";
+        const std::string imageWithInvalidPath = "invalid";
         std::shared_ptr<Buffer> buffer = adapter->obtainImage(imageWithInvalidPath);
     
     } catch(EdgeDetectorException&) {

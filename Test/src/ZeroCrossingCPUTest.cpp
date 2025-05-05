@@ -2,7 +2,7 @@
 #include "ZeroCrossingTest.h"
 #include "ZeroCrossingCPU.h"
 
-
+constexpr float INVALID_THRESHOLD = -1.0f;
 
 constexpr Buffer::DimsIndex WIDTH = Buffer::DimsIndex::WIDTH;
 constexpr Buffer::DimsIndex HEIGHT = Buffer::DimsIndex::HEIGHT;
@@ -120,13 +120,13 @@ TEST_P(ZeroCrossingCPUTest, compute_inputNotSameAsOutput_exceptionExpected) {
 
 TEST_P(ZeroCrossingCPUTest, compute_invalidCheckParams_exceptionExpected) {
 
+    
     syntheticMatrix = std::make_shared<SyntheticMatrix>(height, width, slope, zeroCrossingExpected);
     
     std::shared_ptr<VALID_TYPE> inBuffer = syntheticMatrix->getSyntheticMatrix();
     std::shared_ptr<VALID_TYPE> outBuffer = std::make_shared<VALID_TYPE>(height, width);
     bool throwException = false;
 
-    const float INVALID_THRESHOLD = -1.0f;
     configParams.threshold = INVALID_THRESHOLD;
 
     try {
@@ -183,7 +183,6 @@ TEST_P(ZeroCrossingCPUTest, zeroCrossingCPU_validate_SyntheticMatrix_Vertical_su
     std::shared_ptr<VALID_TYPE> inBufferTranspose = transpose(inBuffer);
     std::shared_ptr<VALID_TYPE> outBuffer = std::make_shared<VALID_TYPE>(width, height);
     bool throwException = false;
-    //auto zeroCrossingCPU = std::dynamic_pointer_cast<IZeroCrossing<Buffer>>(zeroCrossing);
 
     try {
 

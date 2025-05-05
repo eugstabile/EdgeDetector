@@ -1,11 +1,9 @@
 /**
  * @file Utils.h
- * @author Eugenio Stabile (eugenio.stabile@photonicsens.com)
+ * @author Eugenio Stabile
  * @brief Utilities for zero crossing algorithm
  * @version 2.0.0
  * @date 2024-04-02
- * 
- * Copyright (c) 2024, Photonicsens. All rights reserved.
  * 
  */
 
