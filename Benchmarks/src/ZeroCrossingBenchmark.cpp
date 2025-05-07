@@ -17,12 +17,14 @@ constexpr AlgorithmFactory::AlgorithmType ZERO_CROSSING_OPEN_MP = AlgorithmFacto
 constexpr AlgorithmFactory::AlgorithmType ZERO_CROSSING_TVM = AlgorithmFactory::AlgorithmType::ZERO_CROSSING_TVM;
 constexpr AlgorithmFactory::AlgorithmType ZERO_CROSSING_OPENCL = AlgorithmFactory::AlgorithmType::ZERO_CROSSING_OPENCL;
 
+const std::string relativePath_ = "Resources/images/";
 
-const std::string CHESS = "ajedrez";
-const std::string PARROT = "parrot";
-const std::string WORDS = "words";
-const std::string FIGURE = "figure";
-const std::string MOON = "moon";
+const std::string CHESS =      relativePath_ + "ajedrez";
+const std::string PARROT =     relativePath_ + "parrot";
+const std::string WORDS =      relativePath_ + "words";
+const std::string FIGURE =     relativePath_ + "figure";
+const std::string MOON =       relativePath_ + "moon";
+
 const std::vector<std::string> imagesInput = {CHESS, PARROT, WORDS, MOON};
 //const std::vector<std::string> imagesInput = {PARROT, FIGURE, MOON};
 

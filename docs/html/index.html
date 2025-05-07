@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>EdgeDetector Project: EdgeDetector</title>
+<title>EdgeDetector Project: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="photonicLogoBlanco.png"/></td>
   <td id="projectalign">
    <div id="projectname">EdgeDetector Project<span id="projectnumber">&#160;v2.0.0</span>
    </div>
@@ -103,197 +102,10 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">EdgeDetector </div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">EdgeDetector Project Documentation</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2README"></a> </p>
-<h1><a class="anchor" id="autotoc_md20"></a>
-Project Structure Description</h1>
-<p>The project is composed of the following key components:</p>
-<h2><a class="anchor" id="autotoc_md21"></a>
-Algorithm</h2>
-<ul>
-<li><b>EdgeDetector</b>: A component that manages the computation of edge detection algorithms and handles the input/output images.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md22"></a>
-Unit Test</h2>
-<ul>
-<li><b>Test</b>: Contains unit tests for each configuration present in the project.</li>
-<li><b>googletest</b>: Contains files for running the project's unit tests, developed by Google.</li>
-<li><b>Resources</b>: Stores the input images and results obtained from running tests.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md23"></a>
-Benchmarks</h2>
-<ul>
-<li><b>Benchmarks</b>: Measures the execution time of the edge detection algorithms and generates a detailed report on the performance of each algorithm.</li>
-</ul>
-<p>The output is saved in the <b>Resources</b> folder under the name <b>Benchmarking.md</b>.</p>
-<p>After compiling the project, two executables are created:</p>
-<ol type="1">
-<li><b>Tester</b>: Executes a set of unit tests for the main program components.</li>
-<li><b>Benchmarker</b>: Measures the time taken by each algorithm under different configurations.</li>
-</ol>
-<h1><a class="anchor" id="autotoc_md24"></a>
-Environment Pre-requisites</h1>
-<p>The following tools must be installed:</p>
-<ul>
-<li><a href="https://cmake.org/download/">CMake</a></li>
-<li><a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
-<li><a href="https://opencv.org/releases/">OpenCV</a> (For Linux, follow step Nº2 in this <a href="https://phoenixnap.com/kb/installing-opencv-on-ubuntu">link</a>)</li>
-<li><a href="https://git-scm.com/download/win">Git</a></li>
-<li><a href="https://github.com/google/googletest">GoogleTest</a></li>
-<li><a href="https://www.gdbtutorial.com/tutorial/how-install-gdb">Gdb</a> (To use debug mode on Linux).</li>
-</ul>
-<p>Additionally, for Windows, the MSVC compiler needs to be installed with the <em>“Desktop development with C++”</em> package. <b>If you already use C++ with Visual Studio, skip this step</b>.</p>
-<p>To download the package, visit the <a href="https://visualstudio.microsoft.com/es/downloads/">Visual Studio page</a>, scroll down to the <b>Tools for Visual Studio</b> section in <b>All Downloads</b>, and select <b>Build Tools for Visual Studio 2022</b>.</p>
-<p>After downloading, select the <b>Desktop development with C++</b> option and click on the install button. With this, we would have the necessary tools to compile the C++ language in Windows.</p>
-<p><em>This project has been tested in the Visual Studio Code text editor, running Microsoft Windows 11 operating system.</em></p>
-<h1><a class="anchor" id="autotoc_md25"></a>
-Setup Steps</h1>
-<ol type="1">
-<li><b>Ensure Read Permissions (Linux only)</b>: If you are using Linux, make sure that the images saved in <b>Resources</b> have read permissions.</li>
-<li><b>Download VS Code Extensions</b>: Once inside Visual Studio Code, download the following extensions:<ul>
-<li>C/C++: (ID: ms-vscode.cpptools)</li>
-<li>Cmake Tools: (ID: ms-vscode.cmake-tools)</li>
-</ul>
-</li>
-<li><b>Configure Environment Variables</b>: For Windows, define the following environment variables:</li>
-</ol>
-<div class="fragment"><div class="line">OPENCV_PATH: local installation path of OpenCV.</div>
-<div class="line">OPENCV_LIB_DIR: directory where the OpenCV libraries are located.</div>
-<div class="line">MSVC_PATH: local installation path of the Microsoft Visual C++ compiler. (cl.exe)</div>
-</div><!-- fragment --><p>For Linux, as VSCode does not correctly detect environment variables, replace these directories with the absolute directories of GCC on your operating system.</p>
-<ol type="1">
-<li><b>Modify c_cpp_properties.json File</b>: The c_cpp_properties.json file is located inside .vscode folder. This file configures the IntelliSense detection for the project headers and external libraries. If you are using Linux, you will need to adjust this file to include the local absolute path of your GCC installation:</li>
-</ol>
-<h3><a class="anchor" id="autotoc_md26"></a>
-c_cpp_properties.json:</h3>
-<div class="fragment"><div class="line">{</div>
-<div class="line">    &quot;configurations&quot;: [</div>
-<div class="line">        {</div>
-<div class="line">            &quot;name&quot;: &quot;Win32&quot;,</div>
-<div class="line">            &quot;includePath&quot;: [</div>
-<div class="line">                &quot;${workspaceFolder}/EdgeDetector/include&quot;,</div>
-<div class="line">                &quot;${workspaceFolder}/googletest/googletest/include&quot;,</div>
-<div class="line">                &quot;${OPENCV_PATH}/include&quot;</div>
-<div class="line">            ],</div>
-<div class="line">            &quot;defines&quot;: [</div>
-<div class="line">                &quot;_DEBUG&quot;,</div>
-<div class="line">                &quot;UNICODE&quot;,</div>
-<div class="line">                &quot;_UNICODE&quot;</div>
-<div class="line">            ],</div>
-<div class="line">            &quot;windowsSdkVersion&quot;: &quot;10.0.22000.0&quot;,</div>
-<div class="line">            &quot;compilerPath&quot;: &quot;${MSVC_PATH}&quot;,</div>
-<div class="line">            &quot;cStandard&quot;: &quot;c11&quot;,</div>
-<div class="line">            &quot;intelliSenseMode&quot;: &quot;windows-msvc-x64&quot;,</div>
-<div class="line">            &quot;configurationProvider&quot;: &quot;ms-vscode.cmake-tools&quot;,</div>
-<div class="line">            &quot;cppStandard&quot;: &quot;c++17&quot;</div>
-<div class="line">        },</div>
-<div class="line">        {</div>
-<div class="line">            &quot;name&quot;: &quot;Linux&quot;,</div>
-<div class="line">            &quot;includePath&quot;: [</div>
-<div class="line">                &quot;${workspaceFolder}/EdgeDetector/include&quot;,</div>
-<div class="line">                &quot;${workspaceFolder}/googletest/googletest/include&quot;,</div>
-<div class="line">                &quot;/usr/local/include/opencv4&quot;  &lt;- OpenCV path in my case</div>
-<div class="line">            ],</div>
-<div class="line">            &quot;defines&quot;: [</div>
-<div class="line">                &quot;_DEBUG&quot;,</div>
-<div class="line">                &quot;UNICODE&quot;,</div>
-<div class="line">                &quot;_UNICODE&quot;</div>
-<div class="line">            ],</div>
-<div class="line">            &quot;compilerPath&quot;: &quot;/usr/bin/gcc&quot;,  &lt;- GCC path in my case</div>
-<div class="line">            &quot;cStandard&quot;: &quot;gnu11&quot;,</div>
-<div class="line">            &quot;intelliSenseMode&quot;: &quot;linux-gcc-x64&quot;,</div>
-<div class="line">            &quot;configurationProvider&quot;: &quot;ms-vscode.cmake-tools&quot;,</div>
-<div class="line">            &quot;cppStandard&quot;: &quot;gnu++17&quot;</div>
-<div class="line">        }</div>
-<div class="line">    ],</div>
-<div class="line">    &quot;version&quot;: 4</div>
-<div class="line">}</div>
-</div><!-- fragment --><ol type="1">
-<li><b>Modify the launcher</b>: On **.vscode** folder, (Linux case) there is a <b>launch.json</b> preconfigured. You just must change the GDB path for you GDB local instalation path. On Windows, is configured to compile with Microsoft Visual Studio Compiler.</li>
-</ol>
-<h3><a class="anchor" id="autotoc_md27"></a>
-launch.json</h3>
-<div class="fragment"><div class="line">{</div>
-<div class="line">    &quot;version&quot;: &quot;1.0.0&quot;,</div>
-<div class="line">    &quot;configurations&quot;: [</div>
-<div class="line">        {</div>
-<div class="line">            &quot;name&quot;: &quot;Windows Launch&quot;,</div>
-<div class="line">            &quot;type&quot;: &quot;cppvsdbg&quot;,</div>
-<div class="line">            &quot;request&quot;: &quot;launch&quot;,</div>
-<div class="line">            &quot;program&quot;: &quot;${command:cmake.launchTargetPath}&quot;,</div>
-<div class="line">            &quot;args&quot;: [],</div>
-<div class="line">            &quot;stopAtEntry&quot;: false,</div>
-<div class="line">            &quot;cwd&quot;: &quot;${workspaceFolder}/Resources&quot;,</div>
-<div class="line">            &quot;environment&quot;: [</div>
-<div class="line">                {</div>
-<div class="line">                    &quot;name&quot;: &quot;PATH&quot;,</div>
-<div class="line">                    &quot;value&quot;: &quot;${env:PATH}:${command:cmake.getLaunchTargetDirectory}&quot;</div>
-<div class="line">                }</div>
-<div class="line">            ],</div>
-<div class="line">            &quot;console&quot;: &quot;integratedTerminal&quot;</div>
-<div class="line">        },</div>
-<div class="line">        {</div>
-<div class="line">            &quot;name&quot;: &quot;Linux Launch&quot;,</div>
-<div class="line">            &quot;type&quot;: &quot;cppdbg&quot;,</div>
-<div class="line">            &quot;request&quot;: &quot;launch&quot;,</div>
-<div class="line">            &quot;program&quot;: &quot;${command:cmake.launchTargetPath}&quot;,</div>
-<div class="line">            &quot;args&quot;: [],</div>
-<div class="line">            &quot;stopAtEntry&quot;: false,</div>
-<div class="line">            &quot;cwd&quot;: &quot;${workspaceFolder}/Resources&quot;,</div>
-<div class="line">            &quot;environment&quot;: [</div>
-<div class="line">                {</div>
-<div class="line">                    &quot;name&quot;: &quot;PATH&quot;,</div>
-<div class="line">                    &quot;value&quot;: &quot;$PATH:${command:cmake.getLaunchTargetDirectory}&quot;</div>
-<div class="line">                }</div>
-<div class="line">            ],</div>
-<div class="line">            &quot;externalConsole&quot;: false,</div>
-<div class="line">            &quot;MIMode&quot;: &quot;gdb&quot;,</div>
-<div class="line">            &quot;setupCommands&quot;: [</div>
-<div class="line">                {</div>
-<div class="line">                    &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,</div>
-<div class="line">                    &quot;text&quot;: &quot;-enable-pretty-printing&quot;,</div>
-<div class="line">                    &quot;ignoreFailures&quot;: true</div>
-<div class="line">                }</div>
-<div class="line">            ],</div>
-<div class="line">            &quot;miDebuggerPath&quot;: &quot;/usr/bin/gdb&quot;    &lt;- GDB path in my case</div>
-<div class="line">        }</div>
-<div class="line">    ]</div>
-<div class="line">}</div>
-</div><!-- fragment --><ol type="1">
-<li><b>Clean and Reconfigure All Projects</b>: Select the <b>CMake</b> option in the activity bar. Then, in the <b>PROJECT OUTLINE</b> option, click on the three dots and select the “Clean and Reconfigure All Projects” option. This step is necessary for the program compilation.</li>
-</ol>
-<div class="image">
-<img src="cmakebuild.png" alt=""/>
-<div class="caption">
-CMake Build</div></div>
-    <ol type="1">
-<li><b>Choose the Target</b>: Look at the status bar, which is colored blue and located at the bottom of Visual Studio Code. Here, you can select the program as the target to execute.</li>
-</ol>
-<div class="image">
-<img src="selectTarget.png" alt=""/>
-<div class="caption">
-Select Target</div></div>
-    <p>On the same status bar, you have the option to change the Compilation Kit, the variant (Release, Debug), perform a CMake Build, etc.</p>
-<p>If the status bar options are not visible, you can enable them in Settings. Navigate to:</p>
-<p><code>Settings -&gt; Extensions -&gt; CMakeTools -&gt; Status Bar Visibility = Visible</code></p>
-<div class="image">
-<img src="statusBarVisible.png" alt=""/>
-<div class="caption">
-statusBar</div></div>
-    <ol type="1">
-<li><b>Execute the Target</b>: Once everything is set up, press the <b>F5</b> key to execute the chosen target.</li>
-</ol>
-<div class="image">
-<img src="statusBar.png" alt=""/>
-<div class="caption">
-Select Target</div></div>
-    <ol type="1">
-<li><b>Debug Mode</b>: If you want to use the <b>Debug</b> mode in Windows, put a breakpoint on the line you want to debug. </li>
-</ol>
-</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -8,8 +8,9 @@ class OpenCVAdapterTest: public ::testing::Test {
 
 protected:
 
-    const std::string path_ = "ajedrez";
-    const std::string savingPath_ = "ajedrezCV";
+    const std::string relativePath_ = "Resources/images/";
+    const std::string path_ = relativePath_ + "ajedrez";
+    const std::string savingPath_ = relativePath_ + "ajedrezCV";
 
     int64_t width;
     int64_t height;
@@ -74,7 +75,7 @@ TEST_F(OpenCVAdapterTest, OpenCVAdapter_obtainImage_invalidPath) {
 
     try {
         
-        const std::string imageWithInvalidPath = "invalid";
+        const std::string imageWithInvalidPath = "";
         std::shared_ptr<Buffer> buffer = adapter->obtainImage(imageWithInvalidPath);
     
     } catch(EdgeDetectorException&) {

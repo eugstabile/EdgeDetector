@@ -14,7 +14,7 @@ constexpr float LUMA_BLUE_FACTOR = 0.1140209042551f;
 
 std::shared_ptr<Buffer> OpenCVAdapter::obtainImage(const std::string& path) {
 
-    cv::Mat input = cv::imread(imageFolder_ + path + pathFormat_, cv::IMREAD_UNCHANGED);
+    cv::Mat input = cv::imread(path + pathFormat_, cv::IMREAD_UNCHANGED);
 
     if (input.empty()) {
         THROW_EXCEPTION( "Invalid image path!" );
@@ -44,7 +44,7 @@ void OpenCVAdapter::saveImage(const std::shared_ptr<Buffer>& inputImage, const s
     int width = static_cast<int64_t>(dimsImage[WIDTH]);
     cv::Mat image(height, width, CV_32F, inputCopy->getData().data());
 
-    const std::string outputPath = imageFolder_ + imageName + pathFormat_;
+    const std::string outputPath = imageName + pathFormat_;
     
     cv::normalize(image, image, 0, 255, cv::NORM_MINMAX);
     image.convertTo(image, CV_8U);

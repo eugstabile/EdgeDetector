@@ -61,7 +61,7 @@
         openclBuffers.reserve(numOfArguments);
         
         // Read kernel source
-        const std::string fileName = "kernels_GPU/" + algorithmName + "_OCL_GPU.cl";
+        const std::string fileName = "Resources/kernels_GPU/" + algorithmName + "_OCL_GPU.cl";
         std::ifstream fileSource{fileName, std::ios::binary};
 
         if (!fileSource) {

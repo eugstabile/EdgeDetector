@@ -29,21 +29,22 @@ class ZeroCrossingTest : public ::testing::TestWithParam<std::tuple<AlgorithmFac
 public:
 
     using INVALID_TYPE = std::vector<double>;
-    using ConfigParams = IZeroCrossing<B>::ConfigParams;
+    using ConfigParams = typename IZeroCrossing<B>::ConfigParams;
 
 protected:
 
     AlgorithmFactory::AlgorithmType algorithmType = std::get<0>(GetParam());
     std::string processorType = std::get<1>(GetParam());
 
-    const std::string path_ = "parrot";
-    const std::string savingPath_ = path_ + "ZeroCrossing" + processorType;
-    const std::string syntheticPath_ = "matrixSynt"+ processorType + "Input";
-    const std::string syntheticSavingPath_ = "matrixSynt" + processorType + "Output";
-    const std::string syntheticTPath_ = "matrixTrin"+ processorType + "Input";
-    const std::string syntheticTSavingPath_ = "matrixTrin" + processorType + "Output";
-    const std::string compareBinImage_ = "matrixSynt" + processorType + "InputCompare";
-    const std::string matrixCVOut_ = "matrixCVOut.bin";
+    const std::string relativePath_ = "Resources/images/";
+    const std::string path_ =                   relativePath_ + "parrot";
+    const std::string savingPath_ =             path_ + "ZeroCrossing" + processorType;
+    const std::string syntheticPath_ =          relativePath_ + "matrixSynt"+ processorType + "Input";
+    const std::string syntheticSavingPath_ =    relativePath_ + "matrixSynt" + processorType + "Output";
+    const std::string syntheticTPath_ =         relativePath_ + "matrixTrin"+ processorType + "Input";
+    const std::string syntheticTSavingPath_ =   relativePath_ + "matrixTrin" + processorType + "Output";
+    const std::string compareBinImage_ =        relativePath_ + "matrixSynt" + processorType + "InputCompare";
+    const std::string matrixCVOut_ = "Resources/output/matrixCVOut.bin";
 
     
     int64_t height;

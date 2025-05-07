@@ -24,62 +24,12 @@
 */
 var NAVTREE =
 [
-  [ "EdgeDetector Project", "index.html", [
-    [ "EdgeDetector", "index.html", "index" ],
-    [ "Changelog", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html", [
-      [ "[2.0.0] - 2024-05-17", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md1", [
-        [ "Added", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md2", [
-          [ "AlgorithmFactory:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md3", null ],
-          [ "Utils:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md4", null ],
-          [ "ZeroCrossingCPU:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md5", null ],
-          [ "ZeroCrossingOpenMP:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md6", null ],
-          [ "Benchmarks:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md7", null ],
-          [ "Test:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md8", null ]
-        ] ],
-        [ "Changed", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md9", [
-          [ "CMakeLists:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md10", null ],
-          [ "Utils:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md11", null ],
-          [ "ZeroCrossingCPU:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md12", null ],
-          [ "Benchmarks:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md13", null ],
-          [ "Test:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md14", null ]
-        ] ],
-        [ "Fixed", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md15", [
-          [ "ZeroCrossingCPU:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md16", null ],
-          [ "Benchmarks:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md17", null ],
-          [ "Test:", "md_C_1_2Users_2EugenioStabile_8MSI-ES_2Desarrollo_2TesisEugenio_2EdgeDetector_2changelog.html#autotoc_md18", null ]
-        ] ]
-      ] ]
-    ] ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ],
-        [ "Enumerations", "functions_enum.html", null ],
-        [ "Enumerator", "functions_eval.html", null ]
-      ] ]
-    ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Typedefs", "globals_type.html", null ],
-        [ "Macros", "globals_defs.html", null ]
-      ] ]
-    ] ]
-  ] ]
+  [ "EdgeDetector Project", "index.html", ]
 ];
 
 var NAVTREEINDEX =
 [
-"AlgorithmFactory_8h.html",
-"classZeroCrossingOpenCL.html#a67e98380c11d96a145b1e97939b2460e"
+"index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -12,7 +12,7 @@
 #define WIDTH Buffer::DimsIndex::WIDTH
 #define VECTOR_STEP 4
 
-constexpr std::string outputPath_ = "output/";
+const std::string outputPath_{"Resources/output/"};
 
 
 std::shared_ptr<Buffer> transpose(const std::shared_ptr<Buffer>& in) {

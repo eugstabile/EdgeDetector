@@ -3,18 +3,39 @@ cmake_minimum_required(VERSION 3.23)
 project(EdgeProject VERSION 2.0.0 LANGUAGES C CXX)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS   ON)
-set(CMAKE_CXX_STANDARD              20)
+set(CMAKE_CXX_STANDARD              17)
 set(CMAKE_CXX_STANDARD_REQUIRED     ON)
 set(CMAKE_CXX_EXTENSIONS            OFF)
 
+
 if(MSVC)
+
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release/bin")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release/lib")
+    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release/lib")
+
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/Debug/bin")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/Debug/lib")
+    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/Debug/lib")
+
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
     set(CMAKE_CXX_FLAGS_RELEASE " ${CMAKE_CXX_FLAGS_RELEASE} /MP /Gd /std:c++17 /openmp /O2 /nologo /arch:AVX2")
     set(CMAKE_CXX_FLAGS_DEBUG " ${CMAKE_CXX_FLAGS_DEBUG} /MP /Gd /std:c++17 /openmp /Od /nologo /arch:AVX2")
+
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release/bin")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release/lib")
+    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release/lib")
+
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/Debug/bin")
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/Debug/lib")
+    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/Debug/lib")
+
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -fopenmp -O3 -mavx2 -mfma -fstrict-aliasing")
     set(CMAKE_CXX_FLAGS_DEBUG " ${CMAKE_CXX_FLAGS_DEBUG} -fopenmp -mavx2 -mfma -fstrict-aliasing")
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lm -L/usr/lib -lpthread -ldl")
+
 endif()
 
 set(LIBRARY_NAME EdgeDetector)
@@ -53,29 +74,16 @@ if(ENABLE_LTO)
     include(LTO)
 endif()
 
-# OpenCV libraries
-set(OpenCV_DIR $ENV{OPENCV_LIB_DIR})
-find_package(OpenCV REQUIRED core imgproc highgui)
-
-# OpenMP libraries
-find_package(OpenMP REQUIRED)
-
-# OpenCL libraries
-find_package(OpenCL REQUIRED)
 
 # Adding subdirectories
 add_subdirectory(${LIBRARY_NAME})
 
+
 if(BUILD_TESTS)
-    include(CTest)
-    set(gtest_force_shared_crt ON CACHE BOOL "Always use msvcrt.dll" FORCE)
-    enable_testing()
-    add_subdirectory(googletest EXCLUDE_FROM_ALL)
-    add_subdirectory(Test)
-endif()
+set(gtest_force_shared_crt ON CACHE BOOL "Always use msvcrt.dll" FORCE)
+enable_testing()
 
-if(BUILD_BENCHMARKS)
-    add_subdirectory(Benchmarks)
-endif()
+add_subdirectory(Test)
+add_subdirectory(Benchmarks)
 
-## Sería interesante añadirle CTest al google test para tener una mejor integración. Y a lo mejor un git hooks para que los realice de forma automatica
+endif()

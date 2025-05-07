@@ -1,4 +1,4 @@
-add_library(${LIBRARY_NAME} STATIC 
+add_library(${LIBRARY_NAME}
     "AlgorithmFactory.cpp"
     "Buffer.cpp"
     "BufferTVM.cpp"
@@ -14,8 +14,18 @@ add_library(${LIBRARY_NAME} STATIC
     "ZeroCrossingTVM.cpp"
 )
 
-if(OpenMP_CXX_FOUND)
-    target_link_libraries(${LIBRARY_NAME} PUBLIC OpenMP::OpenMP_CXX OpenCL::OpenCL ${OpenCV_LIBRARIES} TVM_LIB_NAME)
-else()
-    target_link_libraries(${LIBRARY_NAME} PUBLIC ${OpenCV_LIBRARIES} TVM_LIB_NAME)
-endif()
+# OpenCV libraries
+find_package(OpenCV REQUIRED core imgproc highgui)
+
+# OpenMP libraries
+find_package(OpenMP REQUIRED)
+
+# OpenCL libraries
+find_package(OpenCL REQUIRED)
+
+target_link_libraries(${LIBRARY_NAME} PUBLIC    OpenMP::OpenMP_CXX 
+                                                OpenCL::OpenCL 
+                                                opencv_core 
+                                                opencv_imgproc 
+                                                opencv_highgui  
+                                                TVM_LIB_NAME)

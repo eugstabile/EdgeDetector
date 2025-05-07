@@ -143,7 +143,7 @@ void TVMAdapter::loadLibraries(const std::string& algorithmName) {
     std::string libraryName;
 
     #ifdef _WIN32
-        libraryName = "kernels_CPU_OPT/" + algorithmName + "Windows_CPU_OPT" + ".dll";
+        libraryName = "Resources/kernels_CPU_OPT/" + algorithmName + "Windows_CPU_OPT" + ".dll";
     #else
         libraryName = pathDir + algorithmName + "Linux_CPU_OPT" + ".so";
     #endif

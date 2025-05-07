@@ -99,7 +99,6 @@ public:
     
 private:
 
-    const std::string imageFolder_ = "images/";
     const std::string pathFormat_ = ".png";
     std::vector<float32_t> image_;
     int bitDepth_ = 8;

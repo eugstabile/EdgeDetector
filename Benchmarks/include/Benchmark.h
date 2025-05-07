@@ -59,7 +59,7 @@
         std::string funcline_;
         std::string comment_;
         AlgorithmFactory::AlgorithmType procTypeId_;
-        const std::string outputPath_ = "output/";	
+        const std::string outputPath_ = "Resources/output/";	
 
         MathResult valueMap_;
         std::tuple<size_t, size_t, size_t> matrixSize_;
